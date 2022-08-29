@@ -1,0 +1,73 @@
+.footer {
+  padding: 48px 0 48px 0;
+  background: rgba(187, 187, 187, 0.15);
+
+  &__body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: 0.05em;
+    color: #272727;
+    margin: 0 0 32px 0;
+  }
+
+  &__form {
+    margin: 0 0 94px 0;
+    input {
+      color: #272727;
+      font-size: 18px;
+      border: 2px solid transparent;
+      background: rgb(255, 255, 255);
+      padding: 15px 247px 17px 29px;
+      transition: all ease 0.2s;
+    }
+    input:hover {
+      border: 2px solid #adadad;
+    }
+    input:focus {
+      border: 2px solid #272727;
+    }
+    input::placeholder {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.045em;
+      color: #272727;
+    }
+    button {
+      padding: 18px 41px;
+      border: 2px solid #272727;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.045em;
+      transition: all ease 0.3s;
+      color: #272727;
+    }
+    button:hover {
+      border: 2px solid #000000;
+      background: rgba(114, 114, 114, 0.1);
+    }
+  }
+
+  &__link {
+    ul {
+      display: flex;
+      li {
+        margin: 0 48px 0 0;
+        a {
+          color: #272727;
+        }
+      }
+      li:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

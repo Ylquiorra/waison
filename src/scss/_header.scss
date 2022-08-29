@@ -1,0 +1,104 @@
+.header {
+  margin: 0 0 60px 0;
+  padding: 46px 0 0 0;
+  &__body {
+    align-items: center;
+    display: flex;
+  }
+
+  &__logo {
+    margin: 0 97px 0 0;
+
+    svg path {
+      transition: all ease 0.2s;
+    }
+  }
+
+  &__logo:hover {
+    svg path {
+      fill: #272727;
+    }
+  }
+
+  &__nav {
+    align-items: center;
+    display: flex;
+    flex: auto;
+  }
+}
+
+.nav-header {
+  &__list {
+    flex: 1 1;
+    ul {
+      align-items: center;
+      display: flex;
+      li {
+        margin: 0 50px 0 0;
+        a {
+          line-height: 19px;
+          letter-spacing: 0.16em;
+          font-size: 16px;
+          font-weight: 500;
+          color: #7f7f7f;
+          transition: all ease 0.2s;
+        }
+        a:hover {
+          color: #272727;
+        }
+      }
+      li:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__right-menu {
+    align-items: center;
+    display: flex;
+  }
+}
+.right-menu-header {
+  &__search {
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    svg path {
+      transition: all ease 0.2s;
+    }
+  }
+  &__search:hover {
+    svg path {
+      fill: #272727;
+    }
+  }
+
+  &__cart {
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    svg path {
+      transition: all ease 0.2s;
+    }
+  }
+  &__cart:hover {
+    svg path {
+      fill: #272727;
+    }
+  }
+
+  &__burger {
+    cursor: pointer;
+    transition: all ease 0.2s;
+    svg rect {
+      transition: all ease 0.2s;
+    }
+  }
+  &__burger:hover {
+    svg rect {
+      fill: #272727;
+    }
+  }
+}
+
+//=========================================//
