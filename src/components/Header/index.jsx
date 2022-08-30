@@ -1,6 +1,7 @@
 import React from 'react';
+import Search from '../Search';
 
-const Header = ({ openBurger, iconBurgerRef }) => {
+const Header = ({ openBurger, iconBurgerRef, onChangeSearchValue, changeSearchValue }) => {
   return (
     <header className="header">
       <div className="header__container">
@@ -35,19 +36,7 @@ const Header = ({ openBurger, iconBurgerRef }) => {
               </ul>
             </div>
             <div className="nav-header__right-menu">
-              <div className="right-menu-header__search">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M21.6655 20.0385L16.2421 14.5928C17.6366 12.9924 18.4006 10.9788 18.4006 8.88249C18.4006 3.98476 14.2733 0 9.2003 0C4.12733 0 0 3.98476 0 8.88249C0 13.7802 4.12733 17.765 9.2003 17.765C11.1048 17.765 12.9196 17.2104 14.4713 16.1576L19.9358 21.6447C20.1643 21.8737 20.4715 22 20.8007 22C21.1123 22 21.4079 21.8853 21.6323 21.6768C22.1091 21.2338 22.1243 20.4992 21.6655 20.0385ZM9.2003 2.31717C12.95 2.31717 16.0005 5.2623 16.0005 8.88249C16.0005 12.5027 12.95 15.4478 9.2003 15.4478C5.45058 15.4478 2.40008 12.5027 2.40008 8.88249C2.40008 5.2623 5.45058 2.31717 9.2003 2.31717Z"
-                    fill="#7F7F7F"
-                  />
-                </svg>
-              </div>
+              <Search onChangeSearchValue={onChangeSearchValue} changeSearchValue={changeSearchValue}/>
               <div className="right-menu-header__cart">
                 <svg
                   width="26"

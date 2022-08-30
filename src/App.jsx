@@ -14,6 +14,7 @@ function App() {
   const [openBurger, setOpenBurger] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const [product, setProduct] = React.useState([]);
+  const [changeSearchValue, setChangeSearchValue] = React.useState('')
 
   const burgerRef = React.useRef();
   const iconBurgerRef = React.useRef();
@@ -44,10 +45,18 @@ function App() {
     fetchData();
   }, []);
 
-  const productItemsLessCode = product.map((objProduct) => (
+  const onChangeSearchValue = (event) => {
+    setChangeSearchValue(event.target.value)
+    console.log(changeSearchValue)
+  }
+
+  const productItemsLessCode = product.filter((objProduct) => objProduct.title.toLowerCase().includes(changeSearchValue.toLocaleLowerCase()))
+  .map((objProduct) => (
     <Card {...objProduct} key={objProduct.id} image={objProduct.imageUrl} />
   ));
   const skeleton = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
+
+
 
   return (
     <div className="wrapper">
@@ -77,7 +86,7 @@ function App() {
           </div>
         </div>
       </section>
-      <Header openBurger={() => setOpenBurger(true)} iconBurgerRef={iconBurgerRef} />
+      <Header openBurger={() => setOpenBurger(true)} iconBurgerRef={iconBurgerRef} onChangeSearchValue={onChangeSearchValue} changeSearchValue={changeSearchValue} />
       <main className="product">
         <div className="product__container">
           <div className="product__filter">
