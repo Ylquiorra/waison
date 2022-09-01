@@ -1,0 +1,273 @@
+.cart {
+  &__body {
+  }
+}
+.body-cart {
+  text-align: center;
+  &__content {
+    margin: 0 0 47px 0;
+  }
+
+  &__content-breadcrumbs {
+    margin: 0 0 22px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        p {
+          font-style: italic;
+          color: #272727;
+        }
+        :nth-last-child(1):before {
+          content: "/";
+          padding: 0 7px;
+          color: #4c4c4c;
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    h1 {
+      text-transform: uppercase;
+      font-size: 42px;
+      color: #272727;
+    }
+    ::before {
+      position: absolute;
+      content: "";
+      width: 45px;
+      height: 3px;
+      background: #272727;
+      bottom: -17px;
+      position: absolute;
+      left: 48%;
+    }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+  }
+
+  &__total {
+  }
+}
+.item-in-cart {
+  flex: 0 1 66.66667%;
+  margin: 0 45px 0 0;
+  &__main {
+    display: grid;
+    grid-template-columns: 90px 1fr 0.15fr;
+    gap: 20px;
+    padding: 0 0 25px 0;
+    border-bottom: 1px solid #cfcfcf;
+  }
+
+  &__main-image {
+    img {
+      width: 90px;
+    }
+  }
+
+  &__main-body {
+  }
+
+  &__right-side {
+  }
+}
+.body-main-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+  }
+
+  &__quantity {
+    display: flex;
+    border: 2px solid #eeeeee;
+    background: #fff;
+    width: fit-content;
+  }
+
+  &__quantity-plus {
+    background: #fff;
+    color: #272727;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+    :hover {
+      background: #272727;
+      color: #fff;
+    }
+  }
+
+  &__quantity-volue {
+    background: #fff;
+    color: #272727;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+  }
+
+  &__quantity-minus {
+    background: #fff;
+    color: #272727;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+    :hover {
+      background: #272727;
+      color: #fff;
+    }
+  }
+}
+.right-side-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: end;
+  &__cancel {
+    align-self: end;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__price {
+    p {
+      font-size: 20px;
+    }
+  }
+}
+.total-cart {
+  flex: 0 1 33.33333%;
+}
+
+.body-cart {
+  &__total {
+  }
+}
+.total-cart {
+  &__body {
+  }
+}
+.total-body {
+  &__title {
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #272727;
+      text-align: left;
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__table {
+  }
+  &__button {
+    color: #fff;
+    background: black;
+    p {
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+    }
+  }
+}
+.total-table {
+  margin: 0 0 25px 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    border: 1px solid #ddd;
+    text-align: start;
+  }
+
+  &__grid-subtotal {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+  }
+
+  &__grid-subtotal-title {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 15px 15px 0;
+    align-self: end;
+    p {
+      font-size: 20px;
+      color: #272727;
+    }
+  }
+
+  &__grid-shipping {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+  }
+
+  &__grid-shipping-text {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 15px 15px 0;
+  }
+
+  &__grid-total {
+    padding: 15px;
+  }
+
+  &__grid-total-price {
+    padding: 15px 15px 15px 0;
+    p {
+      font-size: 20px;
+      color: #272727;
+    }
+  }
+}
+.grid-shipping-text {
+  &__method {
+    ul {
+      li {
+        display: flex;
+        margin: 0 0 12px 0;
+        input {
+          margin: 0 6px 0 0;
+        }
+        p {
+          font-size: 14px;
+          color: #4c4c4c;
+        }
+      }
+    }
+  }
+
+  &__method-list {
+  }
+
+  &__text {
+    p {
+      line-height: 1.5em;
+      font-size: 14px;
+      color: #272727;
+    }
+  }
+}

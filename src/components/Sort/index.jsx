@@ -1,16 +1,24 @@
 import React from 'react';
 
-const Sort = () => {
-  const [openSort, setOpenSort] = React.useState(false);
+const Sort = ({ openSort, setOpenSort, sortRef, onChangeSort, onSelectSort }) => {
+  const sortList = [
+    { name: 'Умолчанию', sortProperty: 'default' },
+    { name: 'Популярности', sortProperty: 'rating' },
+    { name: 'Названию', sortProperty: 'title' },
+    { name: 'Цене: сначала дешевые', sortProperty: 'price' },
+    { name: 'Цене: сначала дорогие', sortProperty: '-price' },
+  ];
+
   return (
     <>
-      <div className="filter-product__body">
-        <div className="filter-product__filter">
+      <div ref={sortRef} className="filter-product__body">
+        {/* <div className="filter-product__filter">
           <b>Фильтр</b>
-        </div>
+        </div> */}
         <div onClick={() => setOpenSort(!openSort)} className="filter-product__sort">
           <b>
-            Сортировка по: Умолчанию<span></span>
+            Сортировка по
+            <span>{onChangeSort.name.toLowerCase()}</span>
           </b>
         </div>
         <div
@@ -20,12 +28,14 @@ const Sort = () => {
               : 'filter-product__dropdown-menu dropdown-menu'
           }`}>
           <ul className="dropdown-menu__list">
-            <li>Умолчанию</li>
-            <li>Популярности</li>
-            <li>Рейтингу</li>
-            <li>Новизне</li>
-            <li>Цене: сначала дешевые</li>
-            <li>Цене: сначала дорогие</li>
+            {sortList.map((sort, index) => (
+              <li
+                key={index}
+                onClick={() => onSelectSort(sort)}
+                className={onChangeSort.sortProperty === sort.sortProperty ? 'list-active' : ''}>
+                {sort.name}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

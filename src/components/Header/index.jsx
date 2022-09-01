@@ -1,7 +1,17 @@
 import React from 'react';
 import Search from '../Search';
+import PopupCart from './PopupCart';
 
-const Header = ({ openBurger, iconBurgerRef, onChangeSearchValue, changeSearchValue }) => {
+const Header = ({
+  openBurger,
+  iconBurgerRef,
+  cartPopupRef,
+  iconCartPopupRef,
+  onChangeSearchValue,
+  changeSearchValue,
+  openCartPopup,
+  setOpenCartPopup,
+}) => {
   return (
     <header className="header">
       <div className="header__container">
@@ -36,8 +46,18 @@ const Header = ({ openBurger, iconBurgerRef, onChangeSearchValue, changeSearchVa
               </ul>
             </div>
             <div className="nav-header__right-menu">
-              <Search onChangeSearchValue={onChangeSearchValue} changeSearchValue={changeSearchValue}/>
-              <div className="right-menu-header__cart">
+              <Search
+                onChangeSearchValue={onChangeSearchValue}
+                changeSearchValue={changeSearchValue}
+              />
+              <div
+                ref={iconCartPopupRef}
+                onClick={() => setOpenCartPopup(!openCartPopup)}
+                className={`${
+                  openCartPopup
+                    ? 'right-menu-header__cart right-menu-header__cart-active'
+                    : 'right-menu-header__cart'
+                }`}>
                 <svg
                   width="26"
                   height="29"
@@ -52,6 +72,11 @@ const Header = ({ openBurger, iconBurgerRef, onChangeSearchValue, changeSearchVa
                   />
                 </svg>
               </div>
+              <PopupCart
+                openCartPopup={openCartPopup}
+                setOpenCartPopup={setOpenCartPopup}
+                cartPopupRef={cartPopupRef}
+              />
               <div ref={iconBurgerRef} onClick={openBurger} className="right-menu-header__burger">
                 <svg
                   width="24"
