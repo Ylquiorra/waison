@@ -14,15 +14,16 @@
       display: flex;
       justify-content: center;
       li {
+        display: flex;
         p {
           font-style: italic;
           color: #272727;
         }
-        :nth-last-child(1):before {
-          content: "/";
-          padding: 0 7px;
-          color: #4c4c4c;
-        }
+      }
+      li:nth-last-child(1):before {
+        content: "/";
+        padding: 0 7px;
+        color: #4c4c4c;
       }
     }
   }

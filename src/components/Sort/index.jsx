@@ -1,6 +1,14 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import AppContext from '../../context';
 
-const Sort = ({ openSort, setOpenSort, sortRef, onChangeSort, onSelectSort }) => {
+import { setOpenSort } from '../../redux/clickOutside/slice';
+
+const Sort = ({ changeSort, onSelectSort }) => {
+  const dispatch = useDispatch();
+  const { openSort } = useSelector((state) => state.clickOutsideSlice);
+  const { sortRef } = React.useContext(AppContext);
+
   const sortList = [
     { name: 'Умолчанию', sortProperty: 'default' },
     { name: 'Популярности', sortProperty: 'rating' },
@@ -12,13 +20,10 @@ const Sort = ({ openSort, setOpenSort, sortRef, onChangeSort, onSelectSort }) =>
   return (
     <>
       <div ref={sortRef} className="filter-product__body">
-        {/* <div className="filter-product__filter">
-          <b>Фильтр</b>
-        </div> */}
-        <div onClick={() => setOpenSort(!openSort)} className="filter-product__sort">
+        <div onClick={() => dispatch(setOpenSort(!openSort))} className="filter-product__sort">
           <b>
             Сортировка по
-            <span>{onChangeSort.name.toLowerCase()}</span>
+            <span>{changeSort.name.toLowerCase()}</span>
           </b>
         </div>
         <div
@@ -32,7 +37,7 @@ const Sort = ({ openSort, setOpenSort, sortRef, onChangeSort, onSelectSort }) =>
               <li
                 key={index}
                 onClick={() => onSelectSort(sort)}
-                className={onChangeSort.sortProperty === sort.sortProperty ? 'list-active' : ''}>
+                className={changeSort.sortProperty === sort.sortProperty ? 'list-active' : ''}>
                 {sort.name}
               </li>
             ))}

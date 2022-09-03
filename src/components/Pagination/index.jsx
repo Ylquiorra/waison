@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
 
-const Pagination = ({ currentPage, setCurrentPage }) => {
+const Pagination = ({ onChangePage }) => {
   return (
     <div className="product__pagination">
       <div className="body-pagination__page">
         <ReactPaginate
-          onPageChange={(changePage) => setCurrentPage(changePage.selected + 1)}
+          onPageChange={(changePage) => onChangePage(changePage.selected + 1)}
           breakLabel="..."
           pageRangeDisplayed={3}
           pageCount={2}

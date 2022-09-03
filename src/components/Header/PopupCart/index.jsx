@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setOpenCartPopup } from '../../../redux/clickOutside/slice';
 
 import ImageBiolet from '../../../assets/img/hero/product-first-photo-on-hero/beolit-normal.jpg';
+import AppContext from '../../../context';
 
-const PopupCart = ({ openCartPopup, setOpenCartPopup, cartPopupRef }) => {
+const PopupCart = () => {
+  const { openCartPopup } = useSelector((state) => state.clickOutsideSlice);
+  const dispatch = useDispatch();
+  const { cartPopupRef } = React.useContext(AppContext);
   return (
     <div
       ref={cartPopupRef}
@@ -53,7 +60,9 @@ const PopupCart = ({ openCartPopup, setOpenCartPopup, cartPopupRef }) => {
         </div>
         <div className="header-cart__content-buttons cart-buttons">
           <Link to="cart">
-            <div className="cart-buttons__view-cart black-button">
+            <div
+              onClick={() => dispatch(setOpenCartPopup(false))}
+              className="cart-buttons__view-cart black-button">
               <p>Посмотреть корзину</p>
             </div>
           </Link>
