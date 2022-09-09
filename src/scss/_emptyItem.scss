@@ -1,0 +1,37 @@
+.empty {
+  padding: 6% 0 0 0;
+  text-align: start;
+  margin: 0 0 40px 0;
+  &__body {
+  }
+
+  &__body-text {
+    display: flex;
+    padding: 16px 0 16px 16px;
+    margin: 0 0 22px 0;
+    background-color: #f7f6f7;
+    color: #4c4c4c;
+    border-top: 3px solid #4c4c4c;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+    h3 {
+      font-size: 18px;
+    }
+    svg {
+      margin: 0 12px 0 0;
+      path {
+        fill: #4c4c4c;
+      }
+    }
+  }
+
+  &__body-button {
+    display: inline-block;
+    p {
+      padding: 8px 15px;
+    }
+  }
+}
+.black-button {
+}

@@ -1,51 +1,63 @@
 [
   {
     "id": "0",
-    "imageUrl": "https://2.downloader.disk.yandex.ru/preview/00dea7714debea4701dccc0e2e715d95f5b03f089c8bf80e244d777b6194c773/inf/01o_pYfBgVMtMHMWvtPeeXIPbgQXfTahMz2sVcVdjNMi2UNdv8wnqKFB6v218GDYgl0ssrVxd22Onw3f63_LpA%3D%3D?uid=1528842725&filename=beolit-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://2.downloader.disk.yandex.ru/preview/00dea7714debea4701dccc0e2e715d95f5b03f089c8bf80e244d777b6194c773/inf/01o_pYfBgVMtMHMWvtPeeXIPbgQXfTahMz2sVcVdjNMi2UNdv8wnqKFB6v218GDYgl0ssrVxd22Onw3f63_LpA%3D%3D?uid=1528842725&filename=beolit-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Beolit 15",
     "price": "590.00",
-    "category": [5, 7],
-    "rating": 4
+    "category": [1, 5],
+    "categoryName": ["Аксессуары", "Для дома"],
+    "rating": 4,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "1",
-    "imageUrl": "https://4.downloader.disk.yandex.ru/preview/a180987bc513d968b3fcc56886a9a47a3bc6c4a6a5cf32f1aba8cc3b8c86907d/inf/pCp1Y9-pHgv59onEhcURH3IPbgQXfTahMz2sVcVdjNMSkoJqe8Ont9MEgxgjBoPuosYul-iHcmyj8kUN7htygw%3D%3D?uid=1528842725&filename=bookends-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://4.downloader.disk.yandex.ru/preview/a180987bc513d968b3fcc56886a9a47a3bc6c4a6a5cf32f1aba8cc3b8c86907d/inf/pCp1Y9-pHgv59onEhcURH3IPbgQXfTahMz2sVcVdjNMSkoJqe8Ont9MEgxgjBoPuosYul-iHcmyj8kUN7htygw%3D%3D?uid=1528842725&filename=bookends-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Bookends",
     "price": "890.00",
     "category": 2,
-    "rating": 2
+    "categoryName": ["Кухня"],
+    "rating": 2,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "2",
-    "imageUrl": "https://3.downloader.disk.yandex.ru/preview/901fc9b4b948ec0fb7f0111697d66fee73bb55c775c16652b9128b6baedcd3d0/inf/vPYwhSeLEnOuI_Q5Zmu35nIPbgQXfTahMz2sVcVdjNPgcemybi9QaLgxtgD0kCxlH1TndUyYaRjVkV8BKpT05g%3D%3D?uid=1528842725&filename=bottle-grinder-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://3.downloader.disk.yandex.ru/preview/901fc9b4b948ec0fb7f0111697d66fee73bb55c775c16652b9128b6baedcd3d0/inf/vPYwhSeLEnOuI_Q5Zmu35nIPbgQXfTahMz2sVcVdjNPgcemybi9QaLgxtgD0kCxlH1TndUyYaRjVkV8BKpT05g%3D%3D?uid=1528842725&filename=bottle-grinder-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Bottle Humidifier",
     "price": "890.00",
     "category": 2,
-    "rating": 8
+    "categoryName": ["Кухня", "Для дома"],
+    "rating": 8,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "3",
-    "imageUrl": "https://3.downloader.disk.yandex.ru/preview/3f78388e23f0b89294fc309900dc6312490a7eb5b3ff7f125106b092c668f3a8/inf/SigxX0EARNs0vPJQ7bQFUnIPbgQXfTahMz2sVcVdjNNpoBrzRKDl0dbmE3Mrr9lMrFoMv5fjuluWZlttgPLpDQ%3D%3D?uid=1528842725&filename=bottle-humidifier-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://3.downloader.disk.yandex.ru/preview/3f78388e23f0b89294fc309900dc6312490a7eb5b3ff7f125106b092c668f3a8/inf/SigxX0EARNs0vPJQ7bQFUnIPbgQXfTahMz2sVcVdjNNpoBrzRKDl0dbmE3Mrr9lMrFoMv5fjuluWZlttgPLpDQ%3D%3D?uid=1528842725&filename=bottle-humidifier-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Bottle Humidifier",
     "price": "190.00",
     "sale": "90.00",
     "category": [2, 5],
-    "rating": 10
+    "categoryName": ["Кухня", "Для дома"],
+    "rating": 10,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "4",
-    "imageUrl": "https://4.downloader.disk.yandex.ru/preview/35b91493c109a83f618d6cb0df118828a3cb120cd2e767870a1f5abbc4675f22/inf/4cVqfSeVLCCTbAPQCht9z3IPbgQXfTahMz2sVcVdjNPRCi6UNPyb2mjLNK9cWUiE427b0PDVTffz9RVfuJmDsg%3D%3D?uid=1528842725&filename=cubic-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://4.downloader.disk.yandex.ru/preview/35b91493c109a83f618d6cb0df118828a3cb120cd2e767870a1f5abbc4675f22/inf/4cVqfSeVLCCTbAPQCht9z3IPbgQXfTahMz2sVcVdjNPRCi6UNPyb2mjLNK9cWUiE427b0PDVTffz9RVfuJmDsg%3D%3D?uid=1528842725&filename=cubic-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Cubic Cable Holder",
     "price": "2290.00",
     "category": [3, 4],
-    "rating": 6
+    "categoryName": ["Мебель", "Освещение"],
+    "rating": 6,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "5",
-    "imageUrl": "https://4.downloader.disk.yandex.ru/preview/8fb9097d83c64b5a03a71008fea603d75a4baa7634b3d2f56fc94e9c34af7951/inf/61TLSu9S7I8H3ir2DFUK8HIPbgQXfTahMz2sVcVdjNOhtghvN_0by9Sww4ozUKho4mq_d0fMJ93of5oWsfXlYw%3D%3D?uid=1528842725&filename=flower-scissors-hover.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
+    "image": "https://4.downloader.disk.yandex.ru/preview/8fb9097d83c64b5a03a71008fea603d75a4baa7634b3d2f56fc94e9c34af7951/inf/61TLSu9S7I8H3ir2DFUK8HIPbgQXfTahMz2sVcVdjNOhtghvN_0by9Sww4ozUKho4mq_d0fMJ93of5oWsfXlYw%3D%3D?uid=1528842725&filename=flower-scissors-hover.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937",
     "title": "Cubic Cable Holder",
     "price": "590.00",
     "category": [2, 6],
-    "rating": 7
+    "categoryName": ["Кухня", "Техника"],
+    "rating": 7,
+    "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   }
 ]

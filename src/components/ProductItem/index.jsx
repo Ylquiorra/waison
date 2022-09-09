@@ -1,14 +1,96 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-const Card = ({ id, title, price, image, sale }) => {
+import { addProductToCart } from '../../redux/productCart/slice';
+import { addProductToWishlist } from '../../redux/productWishlist/slice';
+import AppContext from '../../context';
+
+const ProductItem = ({
+  id,
+  title,
+  price,
+  image,
+  sale,
+  categoryName,
+  category,
+  rating,
+  text,
+  setProductInModal,
+}) => {
+  const dispatch = useDispatch();
+  const selectProduct = useSelector((state) =>
+    state.productCartSlice.productInCart.find((objToCart) => objToCart.id === id),
+  );
+
+  const selectProductInWishlist = useSelector((state) =>
+    state.productWishlistSlice.productInWishlist.find((objToWishlist) => objToWishlist.id === id),
+  );
+
+  const onClickToOpenModal = () => {
+    setProductInModal({
+      id,
+      title,
+      price,
+      image,
+      categoryName,
+      category,
+      sale,
+      rating,
+      text,
+    });
+    setOpenProductModal(true);
+  };
+
+  const onClickToAdd = () => {
+    const productCart = {
+      id,
+      title,
+      price,
+      image,
+      categoryName,
+      category,
+      sale,
+      rating,
+      text,
+      count: 0,
+    };
+    dispatch(addProductToCart(productCart));
+  };
+
+  const onClickToAddToWishlist = () => {
+    const productWishlist = {
+      id,
+      title,
+      price,
+      image,
+      categoryName,
+      category,
+      sale,
+      rating,
+      text,
+    };
+    dispatch(addProductToWishlist(productWishlist));
+  };
+
+  const { setOpenProductModal } = React.useContext(AppContext);
+
   return (
     <div className="item-grid item-grid__4 item-grid__sale">
       <div className="item-grid__body">
         <div className="item-grid__image">
           <div className="item-grid__image-sale-text">{`${sale ? 'Sale!' : ''}`} </div>
-          <img src={image} alt={title} />
+          <Link to={`product/${id}`}>
+            <img src={image} alt={title} />
+          </Link>
           <div className="item-grid__groups-buttons">
-            <div className="item-grid__groups-buttons-favorites">
+            <div
+              onClick={onClickToAddToWishlist}
+              className={`${
+                selectProductInWishlist
+                  ? 'item-grid__groups-buttons-favorites item-grid__groups-buttons-favorites_active'
+                  : 'item-grid__groups-buttons-favorites'
+              }`}>
               <svg
                 width="25"
                 height="22"
@@ -23,7 +105,7 @@ const Card = ({ id, title, price, image, sale }) => {
                 />
               </svg>
             </div>
-            <div className="item-grid__groups-buttons-quick-view">
+            <div onClick={onClickToOpenModal} className="item-grid__groups-buttons-quick-view">
               <svg
                 width="22"
                 height="24"
@@ -45,7 +127,7 @@ const Card = ({ id, title, price, image, sale }) => {
           <div className="item-grid__sale-body">
             <div className={`${sale ? 'item-grid__sale-text' : ''}`}>{price} ₽</div>
             <div className={`${sale ? 'item-grid__text sale' : ''}`}>
-              {`${sale ? sale + ' ₽' : ''}`}{' '}
+              {`${sale ? sale + ' ₽' : ''}`}
             </div>
           </div>
           <div className="item-grid__add-cart">
@@ -64,7 +146,9 @@ const Card = ({ id, title, price, image, sale }) => {
                 />
               </svg>
             </div>
-            <div className="item-grid__add-cart-text">Добавить в корзину</div>
+            <div onClick={onClickToAdd} className="item-grid__add-cart-text">
+              {selectProduct ? 'Посмотреть корзину' : 'Добавить в корзину'}
+            </div>
           </div>
         </div>
       </div>
@@ -72,4 +156,4 @@ const Card = ({ id, title, price, image, sale }) => {
   );
 };
 
-export default Card;
+export default ProductItem;

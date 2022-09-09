@@ -1,0 +1,109 @@
+.modal-window {
+  width: 1000px;
+  z-index: 95;
+  overflow-x: hidden;
+  position: fixed;
+  display: flex;
+  top: 25%;
+  left: 25%;
+  background-color: #fff;
+  &__body {
+    position: relative;
+  }
+  &__cancel {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: rgb(236, 235, 235);
+  }
+  &__cancel:hover {
+    svg {
+      path {
+        fill: #f65b47;
+      }
+    }
+  }
+}
+.modal-body {
+  &__row {
+    display: flex;
+  }
+}
+.modal-body-row {
+  &__image {
+    img {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  &__info {
+    padding: 30px;
+  }
+
+  &__info-title {
+    margin: 0 0 15px 0;
+    h1 {
+      font-size: 32px;
+      color: #272727;
+    }
+  }
+
+  &__info-price {
+    margin: 0 0 22px 0;
+    p {
+      font-size: 28px;
+      color: #272727;
+    }
+  }
+
+  &__info-description {
+    margin: 0 0 22px 0;
+    p {
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      padding: 12px 0;
+      border-top: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    margin: 0 0 22px 0;
+    input {
+      border: 2px solid #eeeeee;
+      background: #fff;
+      color: #272727;
+      font-size: 20px;
+      width: 70px;
+      padding: 0 4px 0 22px;
+      margin: 0 6px 0 0;
+    }
+  }
+
+  &__quantity-button {
+    p {
+    }
+  }
+
+  &__categories {
+    display: flex;
+    p {
+      color: #272727;
+      margin: 0 6px 0 0;
+    }
+    span {
+      color: #272727;
+      margin: 0 8px 0 0;
+    }
+    span:last-child {
+      margin: 0;
+    }
+  }
+}
+.black-button {
+}

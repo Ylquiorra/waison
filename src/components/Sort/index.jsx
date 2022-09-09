@@ -1,13 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import AppContext from '../../context';
 
-import { setOpenSort } from '../../redux/clickOutside/slice';
-
-const Sort = ({ changeSort, onSelectSort }) => {
-  const dispatch = useDispatch();
-  const { openSort } = useSelector((state) => state.clickOutsideSlice);
-  const { sortRef } = React.useContext(AppContext);
+const Sort = ({ changeSort, onSelectSort, setOpenSort, openSort }) => {
+  const sortRef = React.useRef();
 
   const sortList = [
     { name: 'Умолчанию', sortProperty: 'default' },
@@ -16,11 +10,20 @@ const Sort = ({ changeSort, onSelectSort }) => {
     { name: 'Цене: сначала дешевые', sortProperty: 'price' },
     { name: 'Цене: сначала дорогие', sortProperty: '-price' },
   ];
+  React.useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.path.includes(sortRef.current)) {
+        setOpenSort(false);
+      }
+    };
+    document.body.addEventListener('click', handleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, []);
 
   return (
     <>
       <div ref={sortRef} className="filter-product__body">
-        <div onClick={() => dispatch(setOpenSort(!openSort))} className="filter-product__sort">
+        <div onClick={() => setOpenSort(!openSort)} className="filter-product__sort">
           <b>
             Сортировка по
             <span>{changeSort.name.toLowerCase()}</span>

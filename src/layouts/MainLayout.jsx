@@ -5,16 +5,19 @@ import { useSelector } from 'react-redux';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-const MainLayout = () => {
-  const { openBurger } = useSelector((state) => state.clickOutsideSlice);
+const MainLayout = ({ openProductModal }) => {
+  const [openBurger, setOpenBurger] = React.useState(false);
   return (
     <div className="wrapper">
-      <Header />
+      <Header openBurger={openBurger} setOpenBurger={setOpenBurger} />
       <>
         <Outlet />
       </>
       <Footer />
-      <div className={`${openBurger ? ' over__dark-active' : 'over__dark-disable'}`}></div>
+      <div
+        className={`${
+          openBurger || openProductModal ? ' over__dark-active' : 'over__dark-disable'
+        }`}></div>
     </div>
   );
 };

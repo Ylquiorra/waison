@@ -139,7 +139,15 @@
     transform: translateX(100%);
     margin: 0 0 26px 0;
     transition: all 0.2s ease-in-out 0.15s;
+    &_active {
+      svg {
+        path {
+          fill: #f65b47;
+        }
+      }
+    }
   }
+
   &__groups-buttons-quick-view {
     transform: translateX(100%);
     transition: all 0.2s ease-in-out 0.2s;
@@ -169,6 +177,9 @@
   &__add-cart-text {
     line-height: 19px;
     letter-spacing: 0.13em;
+    color: #4c4c4c;
+  }
+  &__add-cart-text:hover {
     color: #272727;
   }
 

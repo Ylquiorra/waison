@@ -1,0 +1,40 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  &__container {
+  }
+
+  &__body {
+  }
+}
+.body-not-found {
+  &__emoji {
+    margin: 0 0 48px 0;
+  }
+
+  &__title {
+    margin: 0 0 48px 0;
+    h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      color: #272727;
+    }
+  }
+
+  &__text {
+    margin: 0 0 48px 0;
+    p {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+      span {
+        color: #272727;
+      }
+    }
+  }
+}

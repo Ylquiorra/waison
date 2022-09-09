@@ -1,0 +1,179 @@
+.product-cart {
+  background-color: #f4f4f4;
+  &__container {
+  }
+
+  &__body {
+    padding: 46px 0;
+  }
+
+  &__body-item {
+  }
+}
+.product-cart-body {
+  &__breadcrumb-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.product-body {
+  &__breadcrumb {
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-left-arrow {
+  }
+
+  &__nav-right-arrow {
+  }
+}
+.universal-body {
+  &__content-breadcrumbs {
+  }
+}
+.product-cart-item {
+  &__row {
+    display: flex;
+  }
+
+  &__image-block {
+    img {
+      width: 600px;
+      height: 600px;
+    }
+  }
+
+  &__main-description {
+  }
+}
+.product-main-description {
+  &__title {
+    margin: 0 0 26px 0;
+    h1 {
+      font-size: 32px;
+      letter-spacing: 0.5px;
+      color: #272727;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    margin: 0 0 26px 0;
+    font-size: 26px;
+    color: #272727;
+  }
+
+  &__favorite {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 26px 0;
+    p {
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      padding: 12px 0;
+      border-top: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      color: #272727;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 0 0 26px 0;
+    align-items: center;
+  }
+
+  &__category {
+    display: flex;
+    p {
+      color: #272727;
+      margin: 0 6px 0 0;
+    }
+    span {
+      color: #272727;
+      margin: 0 8px 0 0;
+    }
+    span:last-child {
+      margin: 0;
+    }
+  }
+}
+.product-main-description-buttons {
+  &__quantity {
+    margin: 0 26px 0 0;
+    display: flex;
+    border: 2px solid #eeeeee;
+    background: #fff;
+    width: fit-content;
+  }
+
+  &__quantity-minus {
+    background: #fff;
+    color: #272727;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+    :hover {
+      background: #272727;
+      color: #fff;
+    }
+  }
+  &__quantity-minus:disabled {
+    opacity: 0.4;
+  }
+
+  &__quantity-volue {
+    text-align: center;
+    background: #fff;
+    color: #272727;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+  }
+
+  &__quantity-plus {
+    background: #fff;
+    color: #272727;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+
+    p {
+      font-size: 25px;
+      line-height: 44px;
+    }
+    :hover {
+      background: #272727;
+      color: #fff;
+    }
+  }
+
+  &__black-button {
+    text-transform: uppercase;
+  }
+}
+.black-button {
+}

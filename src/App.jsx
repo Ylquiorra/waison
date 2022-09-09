@@ -3,39 +3,19 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { setChangeSearchValue } from './redux/filter/slice';
-import { setOpenBurger, setOpenSort, setOpenCartPopup } from './redux/clickOutside/slice';
 import MainLayout from './layouts/MainLayout';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 
 import './scss/style.scss';
 import AppContext from './context';
+import Wishlist from './pages/Wishlist';
+import ProductCard from './pages/ProductCard';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   const dispatch = useDispatch();
-
-  const burgerRef = React.useRef();
-  const iconBurgerRef = React.useRef();
-  const cartPopupRef = React.useRef();
-  const iconCartPopupRef = React.useRef();
-  const sortRef = React.useRef();
-
-  //* из за этой части кода лишние перересовки (что то сделать)
-  React.useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!e.path.includes(iconBurgerRef.current) && !e.path.includes(burgerRef.current)) {
-        dispatch(setOpenBurger(false));
-      }
-      if (!e.path.includes(sortRef.current)) {
-        dispatch(setOpenSort(false));
-      }
-      if (!e.path.includes(iconCartPopupRef.current) && !e.path.includes(cartPopupRef.current)) {
-        dispatch(setOpenCartPopup(false));
-      }
-    };
-    document.body.addEventListener('click', handleClickOutside);
-    return () => document.body.removeEventListener('click', handleClickOutside);
-  }, []);
+  const [openProductModal, setOpenProductModal] = React.useState(false);
 
   const onChangeSearchValue = (event) => {
     dispatch(setChangeSearchValue(event.target.value));
@@ -44,17 +24,17 @@ const App = () => {
   return (
     <AppContext.Provider
       value={{
-        burgerRef,
-        iconBurgerRef,
-        iconCartPopupRef,
-        cartPopupRef,
         onChangeSearchValue,
-        sortRef,
+        openProductModal,
+        setOpenProductModal,
       }}>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route path="" element={<Home />} />
+        <Route path="/" element={<MainLayout openProductModal={openProductModal} />}>
+          <Route path="" element={<Home openProductModal={openProductModal} />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="product/:id" element={<ProductCard />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </AppContext.Provider>

@@ -1,0 +1,142 @@
+.body-cart-wishlist {
+  &__items {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 26px 0;
+  }
+  &__items:last-child {
+    margin: 0 0 32px 0;
+  }
+
+  &__item-row {
+    display: table-row;
+    border-spacing: 2px;
+
+    .body-cart-wishlist {
+      &__items {
+      }
+    }
+    .wishlist-item-row {
+      &__cancel {
+        width: 16px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: middle;
+      }
+
+      &__image {
+        border: 1px solid #ddd;
+        padding: 10px;
+        width: 100px;
+        vertical-align: middle;
+
+        img {
+          width: 80px;
+          height: auto;
+          border-radius: 2px;
+          border: none;
+          padding: 0;
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+
+      &__body {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: start;
+        width: 52%;
+      }
+
+      &__body-title {
+        h4 {
+          font-weight: 700;
+          color: #272727;
+          line-height: 1.5;
+        }
+        margin: 0 0;
+      }
+
+      &__body-price {
+        p {
+          color: #4c4c4c;
+          line-height: 1.5;
+        }
+      }
+
+      &__body-date {
+        p {
+          color: #4c4c4c;
+          line-height: 1.5;
+        }
+      }
+
+      &__buy {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: start;
+      }
+
+      &__buy-text {
+        margin-bottom: 8px;
+        color: #4c4c4c;
+      }
+
+      &__buy-button {
+        display: inline-block;
+        p {
+          padding: 8px 15px;
+        }
+      }
+    }
+    .cancel-button {
+    }
+    .black-button {
+    }
+  }
+}
+.wishlist-item-row {
+  &__cancel {
+  }
+
+  &__image {
+  }
+
+  &__body {
+  }
+
+  &__body-title {
+  }
+
+  &__body-price {
+  }
+
+  &__body-date {
+  }
+
+  &__buy {
+  }
+
+  &__buy-text {
+  }
+
+  &__buy-button {
+  }
+  &_buy-button_active {
+    background: #272727;
+    color: #fff;
+    border: 2px solid #272727;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    p {
+      color: #fff;
+    }
+  }
+}
+.cancel-button {
+}
+.black-button {
+}
