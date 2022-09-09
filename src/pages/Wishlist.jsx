@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import EmptyItem from '../components/EmptyItem';
 
 import ProductInWishlistBlock from '../components/ProductInWishlistBlock';
@@ -13,9 +14,11 @@ const Wishlist = () => {
           <div className="body-cart__content universal-body__content">
             <div className="body-cart__content-breadcrumbs universal-body__content-breadcrumbs">
               <ul>
-                <li>
-                  <p>Начальная страница</p>
-                </li>
+                <Link to="/">
+                  <li>
+                    <p>Начальная страница</p>
+                  </li>
+                </Link>
                 <li>
                   <p>закладки</p>
                 </li>

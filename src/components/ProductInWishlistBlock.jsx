@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { removeProductInCart } from '../redux/productWishlist/slice';
 import { addProductToCart } from '../redux/productCart/slice';
+import { Link } from 'react-router-dom';
 
 const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
   const dispatch = useDispatch();
@@ -62,13 +63,18 @@ const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
               <p>В наличии</p>
             </div>
             <div
-              onClick={onClickToAddToCartFromWishlist}
               className={`${
                 selectProductInWishlist
                   ? 'wishlist-item-row__buy-button black-button wishlist-item-row_buy-button_active'
                   : 'wishlist-item-row__buy-button black-button'
               } `}>
-              <p>{selectProductInWishlist ? 'Добавлено' : 'Добавить в коризину'}</p>
+              {selectProductInWishlist ? (
+                <Link to="/cart">
+                  <p>Посмотреть коризну</p>
+                </Link>
+              ) : (
+                <p onClick={onClickToAddToCartFromWishlist}>Добавить в коризину</p>
+              )}
             </div>
           </td>
         </tr>

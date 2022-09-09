@@ -72,20 +72,6 @@ const Home = () => {
   ));
   const skeleton = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
 
-  const arr = {
-    id: '0',
-    image:
-      'https://2.downloader.disk.yandex.ru/preview/00dea7714debea4701dccc0e2e715d95f5b03f089c8bf80e244d777b6194c773/inf/01o_pYfBgVMtMHMWvtPeeXIPbgQXfTahMz2sVcVdjNMi2UNdv8wnqKFB6v218GDYgl0ssrVxd22Onw3f63_LpA%3D%3D?uid=1528842725&filename=beolit-normal.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1528842725&tknv=v2&size=1920x937',
-    title: 'Beolit 15',
-    price: '590.00',
-    category: [1, 5],
-    categoryName: ['Аксессуары', 'Для дома'],
-    rating: 4,
-    text: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-  };
-
-  console.log('image' in arr);
-
   return (
     <>
       <main className="product">

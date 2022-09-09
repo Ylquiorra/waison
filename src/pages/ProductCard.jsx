@@ -53,9 +53,11 @@ const ProductCard = () => {
               <div className="product-cart-body__breadcrumb-nav">
                 <div className="product-body__breadcrumb universal-body__content-breadcrumbs ">
                   <ul>
-                    <li>
-                      <p>Начальная страница</p>
-                    </li>
+                    <Link to="/">
+                      <li>
+                        <p>Начальная страница</p>
+                      </li>
+                    </Link>
                     <li>
                       <p>Какой то текс</p>
                     </li>

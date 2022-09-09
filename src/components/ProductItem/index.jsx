@@ -146,8 +146,14 @@ const ProductItem = ({
                 />
               </svg>
             </div>
-            <div onClick={onClickToAdd} className="item-grid__add-cart-text">
-              {selectProduct ? 'Посмотреть корзину' : 'Добавить в корзину'}
+            <div className="item-grid__add-cart-text">
+              {selectProduct ? (
+                <Link to="/cart">
+                  <p>Посмотреть корзину</p>
+                </Link>
+              ) : (
+                <p onClick={onClickToAdd}>Добавить в корзину</p>
+              )}
             </div>
           </div>
         </div>
