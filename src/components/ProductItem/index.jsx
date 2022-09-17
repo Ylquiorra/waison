@@ -16,7 +16,9 @@ const ProductItem = ({
   category,
   rating,
   text,
+  imageSlider,
   setProductInModal,
+  iconModalProductRef,
 }) => {
   const dispatch = useDispatch();
   const selectProduct = useSelector((state) =>
@@ -37,6 +39,7 @@ const ProductItem = ({
       category,
       sale,
       rating,
+      imageSlider,
       text,
     });
     setOpenProductModal(true);
@@ -53,7 +56,6 @@ const ProductItem = ({
       sale,
       rating,
       text,
-      count: 0,
     };
     dispatch(addProductToCart(productCart));
   };
@@ -76,14 +78,14 @@ const ProductItem = ({
   const { setOpenProductModal } = React.useContext(AppContext);
 
   return (
-    <div className="item-grid item-grid__4 item-grid__sale">
+    <div className="item-grid item-grid__sale">
       <div className="item-grid__body">
         <div className="item-grid__image">
           <div className="item-grid__image-sale-text">{`${sale ? 'Sale!' : ''}`} </div>
           <Link to={`product/${id}`}>
             <img src={image} alt={title} />
           </Link>
-          <div className="item-grid__groups-buttons">
+          <div ref={iconModalProductRef} className="item-grid__groups-buttons">
             <div
               onClick={onClickToAddToWishlist}
               className={`${

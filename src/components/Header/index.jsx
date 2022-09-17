@@ -44,7 +44,7 @@ const Header = ({ openBurger, setOpenBurger }) => {
             </div>
             <div className="body-menu__list">
               <ul>
-                <Link to="#" onClick={onClickToLinks}>
+                <Link to="account" onClick={onClickToLinks}>
                   <li>
                     <p>Account</p>
                   </li>

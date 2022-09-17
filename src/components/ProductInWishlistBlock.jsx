@@ -20,7 +20,6 @@ const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
       image,
       category: [],
       sale,
-      added: true,
     };
     dispatch(addProductToCart(productFromWishlist));
   };
@@ -51,9 +50,20 @@ const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
             <div className="wishlist-item-row__body-title">
               <h4>{title}</h4>
             </div>
-            <div className="wishlist-item-row__body-price">
-              <p>{price} р</p>
-            </div>
+            {sale ? (
+              <div className="wishlist-item-row__body-price">
+                <div className="wishlist-item-row__body-price-old">
+                  <p>{price} ₽</p>
+                </div>
+                <div className="wishlist-item-row__body-price-sale">
+                  <p>{sale} ₽</p>
+                </div>
+              </div>
+            ) : (
+              <div className="wishlist-item-row__body-price">
+                <p>{price} ₽</p>
+              </div>
+            )}
             <div className="wishlist-item-row__body-date">
               <p>September 5, 2022</p>
             </div>

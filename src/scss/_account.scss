@@ -1,0 +1,58 @@
+.account {
+  &__container {
+    max-width: 970px;
+  }
+}
+
+.account-body {
+  &__navigation {
+    margin: 0 0 8vh 0;
+  }
+
+  &__navigation-list {
+    display: flex;
+    border-bottom: 2px solid #eeeeee;
+    padding: 0 0 22px 0;
+    margin: 0 0 22px 0;
+    li {
+      margin: 0 35px 0 0;
+      a {
+        padding: 22px 0;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all ease 0.2s;
+        &:hover {
+          color: #272727;
+        }
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__navigation-content {
+    text-align: start;
+    h6 {
+      margin: 0 0 20px 0;
+      color: #4c4c4c;
+      span {
+        font-weight: 600;
+      }
+    }
+    p {
+      line-height: 1.5;
+      color: #4c4c4c;
+    }
+  }
+}
+
+.body-account {
+  margin: 0 0 11vh 0;
+}
+.body-account-breadcrumbs {
+}
+.body-login {
+  &__main-title {
+  }
+}

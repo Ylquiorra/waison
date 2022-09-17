@@ -26,10 +26,16 @@ const filterSlice = createSlice({
     setChangeSort(state, action) {
       state.changeSort = action.payload
     },
+    setFilters(state, action) {
+      state.categoryId = Number(action.payload.categoryId)
+      state.currentPage = Number(action.payload.currentPage)
+      state.changeSearchValue = action.payload.changeSearchValue
+      state.changeSort = action.payload.changeSort
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCategoryId, setCurrentPage, setChangeSearchValue, setChangeSort } = filterSlice.actions
+export const { setCategoryId, setCurrentPage, setChangeSearchValue, setChangeSort, setFilters } = filterSlice.actions
 
 export default filterSlice.reducer

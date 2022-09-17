@@ -1,6 +1,6 @@
 .modal-window {
   width: 1000px;
-  z-index: 95;
+  z-index: 915;
   overflow-x: hidden;
   position: fixed;
   display: flex;
@@ -32,7 +32,7 @@
   }
 }
 .modal-body-row {
-  &__image {
+  &__image-block {
     img {
       width: 450px;
       height: 450px;
@@ -52,10 +52,25 @@
   }
 
   &__info-price {
+    align-items: end;
+    display: flex;
     margin: 0 0 22px 0;
     p {
       font-size: 28px;
       color: #272727;
+    }
+  }
+  &__info-old-price {
+    p {
+      font-size: 16px;
+      color: #4c4c4c;
+      margin: 0 18px 0 0;
+      text-decoration: line-through;
+    }
+  }
+  &__info-sale-price {
+    p {
+      color: #f65b47;
     }
   }
 
@@ -105,5 +120,68 @@
     }
   }
 }
-.black-button {
+.image-block-modal-body {
+  &__wrapper {
+    position: relative;
+    &:hover {
+      .image-block-modal-body__back-arrow {
+        opacity: 1;
+      }
+      .image-block-modal-body__next-arrow {
+        opacity: 1;
+      }
+    }
+  }
+  &__image {
+    width: 450px;
+    height: 450px;
+    img {
+      transition: all ease 0.2s;
+      position: absolute;
+      opacity: 0;
+    }
+  }
+  &__image-active {
+    opacity: 1 !important;
+  }
+  &__back-arrow {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    svg {
+      path {
+        fill: #272727;
+        transition: all ease 0.2s;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #f65b47;
+        }
+      }
+    }
+  }
+  &__next-arrow {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    svg {
+      fill: #272727;
+      transition: all ease 0.2s;
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #f65b47;
+        }
+      }
+    }
+  }
 }

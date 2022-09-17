@@ -7,6 +7,7 @@ const initialState = {
   productInCart: [],
   totalPrice: 0,
   totalCount: 0,
+  valueCount: 1,
 }
 
 const productCartSlice = createSlice({
@@ -18,12 +19,23 @@ const productCartSlice = createSlice({
       if (findProductById) {
         findProductById.count++
       } else {
-        state.productInCart.push({
-          ...action.payload,
-          count: 1,
-        })
+        if (state.valueCount > 1) {
+          state.productInCart.push({
+            ...action.payload,
+            count: state.valueCount,
+          })
+        } else {
+          state.productInCart.push({
+            ...action.payload,
+            count: 1,
+          })
+        }
+
       }
       state.totalCount = calcTotalCount(state.productInCart)
+      if (state.productInCart.sale) {
+
+      }
       state.totalPrice = calcTotalPrice(state.productInCart);
     },
     minusProductInCart(state, action) {
@@ -38,10 +50,13 @@ const productCartSlice = createSlice({
       state.productInCart = state.productInCart.filter((obj) => obj.id !== action.payload);
       state.totalCount = calcTotalCount(state.productInCart)
       state.totalPrice = calcTotalPrice(state.productInCart);
+    },
+    setValueCount(state, action) {
+      state.valueCount = action.payload
     }
   }
 })
 
-export const { addProductToCart, minusProductInCart, removeProductInCart } = productCartSlice.actions
+export const { addProductToCart, minusProductInCart, removeProductInCart, setValueCount } = productCartSlice.actions
 
 export default productCartSlice.reducer

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import EmptyItem from '../components/EmptyItem';
@@ -15,7 +15,7 @@ const Cart = () => {
   const totalPriceWithFastDelevery = totalPrice + 500;
 
   return (
-    <section className="cart universal">
+    <main className="cart universal">
       <div className="cart__container universal__container">
         <div className="cart__body body-cart universal-body">
           <div className="body-cart__content universal-body__content">
@@ -53,7 +53,7 @@ const Cart = () => {
                         <p>Первичная стоимость</p>
                       </div>
                       <div className="total-table__grid-subtotal-title">
-                        <p>{totalPrice} p.</p>
+                        <p>{totalPrice} ₽.</p>
                       </div>
                       <div className="total-table__grid-shipping">
                         <p>Доставка</p>
@@ -85,7 +85,7 @@ const Cart = () => {
                           {changeChecked === 'Быстрая доставка'
                             ? totalPriceWithFastDelevery
                             : totalPrice}
-                          p.
+                          &nbsp;₽.
                         </p>
                       </div>
                     </div>
@@ -101,7 +101,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
+import { useSelector } from 'react-redux';
 
 const Pagination = ({ onChangePage }) => {
+  const { currentPage } = useSelector((state) => state.filterSlice);
   return (
     <div className="product__pagination">
       <div className="body-pagination__page">
@@ -11,6 +13,7 @@ const Pagination = ({ onChangePage }) => {
           pageRangeDisplayed={3}
           pageCount={2}
           previousLabel=""
+          forcePage={currentPage - 1}
           nextLabel={
             <div className="body-pagination__arrow">
               <svg

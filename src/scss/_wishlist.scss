@@ -60,9 +60,24 @@
       }
 
       &__body-price {
+        display: flex;
+        align-items: end;
         p {
           color: #4c4c4c;
           line-height: 1.5;
+        }
+      }
+      &__body-price-old {
+        margin: 0 12px 0 0;
+        p {
+          font-size: 14px;
+          text-decoration: line-through;
+        }
+      }
+      &__body-price-sale {
+        p {
+          font-size: 18px;
+          color: #f65b47;
         }
       }
 

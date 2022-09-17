@@ -32,7 +32,7 @@ const PopupCart = ({ cartPopupRef, setOpenCartPopup, openCartPopup }) => {
               <p>Стоимость:</p>
             </div>
             <div className="total-cart__price">
-              <p>{totalPrice} р.</p>
+              <p>{totalPrice} ₽.</p>
             </div>
           </div>
         ) : (

@@ -1,30 +1,33 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-
-import { setChangeSearchValue } from './redux/filter/slice';
-import MainLayout from './layouts/MainLayout';
-import Cart from './pages/Cart';
-import Home from './pages/Home';
 
 import './scss/style.scss';
 import AppContext from './context';
+
 import Wishlist from './pages/Wishlist';
 import ProductCard from './pages/ProductCard';
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import MainLayout from './layouts/MainLayout';
+import Cart from './pages/Cart';
+import Home from './pages/Home';
+import Account from './pages/Account';
+import Register from './pages/Register';
 
 const App = () => {
-  const dispatch = useDispatch();
   const [openProductModal, setOpenProductModal] = React.useState(false);
 
-  const onChangeSearchValue = (event) => {
-    dispatch(setChangeSearchValue(event.target.value));
-  };
+  React.useEffect(() => {
+    if (openProductModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [openProductModal]);
 
   return (
     <AppContext.Provider
       value={{
-        onChangeSearchValue,
         openProductModal,
         setOpenProductModal,
       }}>
@@ -34,6 +37,9 @@ const App = () => {
           <Route path="cart" element={<Cart />} />
           <Route path="product/:id" element={<ProductCard />} />
           <Route path="wishlist" element={<Wishlist />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/account" element={<Account />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -97,6 +97,10 @@ body {
   flex-direction: column;
 }
 
+.slider-skeleton {
+  margin: 0 0 60px 0;
+}
+
 [class*="__container"] {
   max-width: 1170px;
   margin: 0 auto;

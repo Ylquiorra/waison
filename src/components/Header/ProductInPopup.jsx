@@ -5,6 +5,7 @@ import { removeProductInCart } from '../../redux/productCart/slice';
 
 const ProductInPopup = ({ id, title, price, image, category, sale, count }) => {
   const dispatch = useDispatch();
+
   return (
     <div className="header-cart__item item-cart">
       <div className="item-cart__image">
@@ -19,9 +20,20 @@ const ProductInPopup = ({ id, title, price, image, category, sale, count }) => {
             <p>{count} &nbsp;× &nbsp;</p>
             <span> </span>
           </div>
-          <div className="item-cart__text-price">
-            <p>{price} р.</p>
-          </div>
+          {sale ? (
+            <div className="item-cart__price">
+              <div className="item-cart__price-old">
+                <p>{price} </p>
+              </div>
+              <div className="item-cart__price-sale">
+                <p>{sale} ₽.</p>
+              </div>
+            </div>
+          ) : (
+            <div className="item-cart__text-price">
+              <p>{price} ₽.</p>
+            </div>
+          )}
         </div>
       </div>
       <div

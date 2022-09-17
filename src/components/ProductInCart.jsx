@@ -7,7 +7,7 @@ import {
   removeProductInCart,
 } from '../redux/productCart/slice';
 
-const ProductInCart = ({ id, title, price, image, category, sale, count, formCounter }) => {
+const ProductInCart = ({ id, title, price, image, category, sale, count }) => {
   const dispatch = useDispatch();
 
   const onClickMinus = () => {
@@ -60,12 +60,25 @@ const ProductInCart = ({ id, title, price, image, category, sale, count, formCou
             />
           </svg>
         </div>
-        <div className="right-side-cart__price">
-          <p>{price * count} p.</p>
-        </div>
+        {sale ? (
+          <div className="right-side-cart__price">
+            <div className="right-side-cart__price-old">
+              <p>{price * count} ₽.</p>
+            </div>
+            <div className="right-side-cart__price-sale">
+              <p>{sale * count} ₽.</p>
+            </div>
+          </div>
+        ) : (
+          <div className="right-side-cart__price">
+            <p>{price * count} ₽.</p>
+          </div>
+        )}
       </div>
     </div>
   );
 };
+{
+}
 
 export default ProductInCart;

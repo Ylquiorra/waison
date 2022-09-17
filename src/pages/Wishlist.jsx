@@ -8,7 +8,7 @@ import ProductInWishlistBlock from '../components/ProductInWishlistBlock';
 const Wishlist = () => {
   const { productInWishlist } = useSelector((state) => state.productWishlistSlice);
   return (
-    <section className="cart universal">
+    <main className="cart universal">
       <div className="cart__container universal__container">
         <div className="cart__body body-cart universal-body">
           <div className="body-cart__content universal-body__content">
@@ -37,7 +37,7 @@ const Wishlist = () => {
           )}
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

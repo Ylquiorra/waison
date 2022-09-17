@@ -1,15 +1,16 @@
 import React from 'react';
 
+export const sortList = [
+  { name: 'Умолчанию', sortProperty: 'default' },
+  { name: 'Популярности', sortProperty: 'rating' },
+  { name: 'Названию', sortProperty: 'title' },
+  { name: 'Цене: сначала дорогие', sortProperty: 'price' },
+  { name: 'Цене: сначала дешевые', sortProperty: '-price' },
+];
+
 const Sort = ({ changeSort, onSelectSort, setOpenSort, openSort }) => {
   const sortRef = React.useRef();
 
-  const sortList = [
-    { name: 'Умолчанию', sortProperty: 'default' },
-    { name: 'Популярности', sortProperty: 'rating' },
-    { name: 'Названию', sortProperty: 'title' },
-    { name: 'Цене: сначала дешевые', sortProperty: 'price' },
-    { name: 'Цене: сначала дорогие', sortProperty: '-price' },
-  ];
   React.useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.path.includes(sortRef.current)) {

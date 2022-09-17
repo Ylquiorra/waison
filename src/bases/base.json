@@ -2,136 +2,244 @@
   {
     "id": "0",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/beolit-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/beolit-hover-600x600.jpg",
     "title": "Beolit 15",
     "price": "590.00",
     "category": [1, 5],
     "categoryName": ["Аксессуары", "Для дома"],
     "rating": 4,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/beolit-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/beolit-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "1",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bookends-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bookends-hover-600x600.jpg",
     "title": "Bookends",
     "price": "890.00",
     "category": 2,
     "categoryName": ["Кухня"],
     "rating": 2,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bookends-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bookends-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "2",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-grinder-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-grinder-hover-600x600.jpg",
     "title": "Bottle Humidifier",
     "price": "890.00",
     "category": 2,
     "categoryName": ["Кухня", "Для дома"],
     "rating": 8,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-grinder-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-grinder-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "3",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-humidifier-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-humidifier-hover-600x600.jpg",
     "title": "Bottle Humidifier",
     "price": "190.00",
     "sale": "90.00",
     "category": [2, 5],
     "categoryName": ["Кухня", "Для дома"],
     "rating": 10,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-humidifier-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bottle-humidifier-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "4",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2013/06/cubic-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2013/06/cubic-hover-600x600.jpg",
     "title": "Cubic Cable Holder",
     "price": "990.00",
     "category": [3, 4],
     "categoryName": ["Мебель", "Освещение"],
     "rating": 6,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2013/06/cubic-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2013/06/cubic-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "5",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/flower-scissors-hover-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/flower-scissors-normal-600x600.jpg",
     "title": "Flower Scissors",
     "price": "590.00",
     "category": [2, 6],
     "categoryName": ["Кухня", "Техника"],
     "rating": 7,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/flower-scissors-hover-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/flower-scissors-normal-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "6",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/Grey-watch-hover-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/Grey-watch-hover-600x600.jpg",
     "title": "Grey Watch",
     "price": "790.00",
     "category": [6],
     "categoryName": ["Техника"],
     "rating": 9,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/Grey-watch-hover-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/Grey-watch-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "7",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bulb-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bulb-hover-600x600.jpg",
     "title": "Happy Light",
     "price": "690.00",
     "sale": "290.00",
     "category": [2, 6],
     "categoryName": ["Кухня", "Техника"],
     "rating": 10,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bulb-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/bulb-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "8",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/sweeper-and-funnel-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/sweeper-and-funnel-hover-600x600.jpg",
     "title": "Broomstick",
     "price": "870.00",
     "category": [2, 5],
     "categoryName": ["Кухня", "Для дома"],
     "rating": 3,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/sweeper-and-funnel-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/sweeper-and-funnel-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "9",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/KettleTeapot-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/KettleTeapot-hover-600x600.jpg",
     "title": "Kettle Teapot",
     "price": "990.00",
     "category": [2, 5],
     "categoryName": ["Кухня", "Для дома"],
     "rating": 11,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/KettleTeapot-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/KettleTeapot-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "10",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/teapot-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/teapot-hover-600x600.jpg",
     "title": "Silhouette",
     "price": "540.00",
     "category": [2, 5],
     "categoryName": ["Кухня", "Для дома"],
     "rating": 7,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/teapot-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/teapot-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   },
   {
     "id": "11",
     "image": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/oak-normal-600x600.jpg",
-    "secondImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/oak-hover-600x600.jpg",
     "title": "Oak Trey",
     "price": "890.00",
     "sale": "490.00",
     "category": [2, 3, 5],
     "categoryName": ["Кухня", "Мебель", "Для дома"],
     "rating": 7,
+    "imageSlider": [
+      {
+        "sliderId": 0,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/oak-normal-600x600.jpg"
+      },
+      {
+        "sliderId": 1,
+        "sliderImage": "https://demoapus-wp.com/maison/wp-content/uploads/2017/07/oak-hover-600x600.jpg"
+      }
+    ],
     "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
   }
 ]
