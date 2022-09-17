@@ -11,14 +11,15 @@ const SingUp = () => {
   const navigate = useNavigate();
   const auth = getAuth();
 
+ 
+
   const handleSingUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
         dispatch(
           setUser({
             email: user.email,
-            userId: user.uid,
+            id: user.uid,
             token: user.accessToken,
           }),
         );

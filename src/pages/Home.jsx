@@ -2,8 +2,10 @@ import React from 'react';
 import qs from 'qs';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { getAuth } from 'firebase/auth';
 
 import { setCategoryId, setCurrentPage, setChangeSort, setFilters } from '../redux/filter/slice';
+import { setUser } from '../redux/user/slice';
 import { fetchProductById } from '../redux/product/asyncActions';
 import AppContext from '../context';
 
@@ -20,6 +22,8 @@ import NoProducts from '../components/NoProducts';
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const auth = getAuth();
+  console.log(auth);
   const { categoryId, currentPage, changeSort, changeSearchValue } = useSelector(
     (state) => state.filterSlice,
   );
@@ -58,10 +62,10 @@ const Home = () => {
       }),
     );
   };
+
   React.useEffect(() => {
     if (window.location.search) {
       const paramsSearch = qs.parse(window.location.search.substring(1));
-
       const sort = sortList.find((obj) => obj.sortProperty === paramsSearch.sortProperty);
       dispatch(
         setFilters({
@@ -102,6 +106,21 @@ const Home = () => {
     }
     isMounted.current = true;
   }, [changeSearchValue, currentPage, categoryId, changeSort.sortProperty]);
+
+  //! ипользую два раза, нужно вынести код (неидеально решение)
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (auth.currentUser !== null) {
+        dispatch(
+          setUser({
+            email: auth.currentUser.email,
+            id: auth.currentUser.uid,
+            token: auth.currentUser.accessToken,
+          }),
+        );
+      }
+    }, 2000);
+  }, []);
 
   const onChangePage = (numberPage) => {
     dispatch(setCurrentPage(numberPage));

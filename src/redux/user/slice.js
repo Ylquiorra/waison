@@ -4,6 +4,7 @@ const initialState = {
   email: null,
   token: null,
   id: null,
+  currentNavigate: 0,
 };
 
 const userSlice = createSlice({
@@ -20,9 +21,12 @@ const userSlice = createSlice({
       state.token = null;
       state.id = null;
     },
+    setCurrentNavigate(state, action) {
+      state.currentNavigate = action.payload
+    }
   },
 });
 
-export const { setUser, removeUser } = userSlice.actions;
+export const { setUser, removeUser, setCurrentNavigate } = userSlice.actions;
 
 export default userSlice.reducer;
