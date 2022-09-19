@@ -1,5 +1,6 @@
 .product-cart {
   background-color: #f4f4f4;
+  margin: 0 0 60px 0;
   &__container {
   }
 
@@ -209,5 +210,25 @@
     text-transform: uppercase;
   }
 }
-.black-button {
+
+.related-product {
+  margin: 0 0 60px 0;
+  &__container {
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    color: #272727;
+    font-size: 24px;
+    margin: 0 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__grid-items {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-between;
+    grid-row-gap: 40px;
+  }
 }

@@ -7,6 +7,8 @@ import './firebase'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './scss/style.scss';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

@@ -11,6 +11,8 @@ const ProductModal = ({
   title,
   price,
   category,
+  defaultPrice,
+
   categoryName,
   sale,
   rating,
@@ -50,12 +52,14 @@ const ProductModal = ({
     dispatch(
       addProductToCart({
         id,
-        image,
         title,
         price,
-        category,
+        defaultPrice: defaultPrice || 0,
+        image,
         categoryName,
-        sale,
+        category,
+        
+        sale: sale || 0,
         rating,
         text,
         count: valueCount,

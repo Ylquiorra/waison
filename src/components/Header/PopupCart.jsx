@@ -6,6 +6,7 @@ import ProductInPopup from './ProductInPopup';
 
 const PopupCart = ({ cartPopupRef, setOpenCartPopup, openCartPopup }) => {
   const { productInCart } = useSelector((state) => state.productCartSlice);
+  console.log(productInCart);
 
   const { totalPrice } = useSelector((state) => state.productCartSlice);
 

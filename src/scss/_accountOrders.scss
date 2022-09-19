@@ -1,0 +1,40 @@
+.account-body-content-navigation {
+  &__orders {
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 28px 0;
+  }
+
+  &__orders-head-text {
+    tr {
+      th {
+        color: #4c4c4c;
+        line-height: 1.5em;
+        font-weight: 400;
+        padding: 4px 8px;
+      }
+    }
+  }
+
+  &__orders-body-text {
+    tr {
+      td {
+        border: none;
+        overflow: hidden;
+        border-width: 1px 0px 0px 0px;
+        color: #4c4c4c;
+        border-style: solid;
+        border-color: #eeeeee;
+        padding: 10px 8px;
+        line-height: 1.5em;
+      }
+    }
+  }
+  &__orders-body-text-button {
+    background-color: #fff;
+    padding: 8px 12px;
+  }
+}

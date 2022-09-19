@@ -12,6 +12,7 @@ const Cart = () => {
   const arrChecked = ['Бесплатная доставка', 'Быстрая доставка', 'Самовывоз'];
   const [changeChecked, setChangeChecked] = React.useState('Бесплатная доставка');
 
+  
   const totalPriceWithFastDelevery = totalPrice + 500;
 
   return (

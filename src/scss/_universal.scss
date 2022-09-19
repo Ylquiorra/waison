@@ -65,3 +65,23 @@
     }
   }
 }
+.universal-input {
+  border: 2px solid #eeeeee;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.2s ease-in-out 0s;
+  &:hover {
+    border: 2px solid #d4d4d4;
+  }
+  &:focus {
+    border: 2px solid #b6b6b6;
+  }
+}
+.universal-input-name {
+  color: #272727 !important;
+  margin: 0 0 12px 0 !important;
+}
+.universal-asterisk {
+  font-size: 14px;
+  color: #f65b47;
+}

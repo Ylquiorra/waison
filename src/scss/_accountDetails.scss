@@ -1,0 +1,68 @@
+.account-body-content-navigation {
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.details-navigation-account {
+  &__button {
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 16px;
+    align-self: end;
+  }
+}
+.details-navigation-account-main-info {
+  &__name {
+    display: flex;
+    margin: 0 0 28px 0;
+  }
+
+  &__name-first-name {
+    flex: 1 1 50%;
+    margin: 0 28px 0 0;
+  }
+
+  &__name-last-name {
+    flex: 1 1 50%;
+  }
+
+  &__nickname {
+    margin: 0 0 28px 0;
+    input {
+      margin: 0 0 8px 0;
+    }
+    p {
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  &__email {
+    margin: 0 0 28px 0;
+  }
+}
+
+.details-navigation-account-change-password {
+  &__title {
+    h2 {
+      font-size: 24px;
+      line-height: 1.5;
+      color: #333333;
+      margin: 0 0 28px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+  &__current-password {
+    margin: 0 0 28px 0;
+  }
+
+  &__new-password {
+    margin: 0 0 28px 0;
+  }
+
+  &__confirm-new-password {
+    margin: 0 0 28px 0;
+  }
+}

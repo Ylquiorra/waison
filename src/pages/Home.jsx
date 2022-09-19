@@ -9,7 +9,6 @@ import { setUser } from '../redux/user/slice';
 import { fetchProductById } from '../redux/product/asyncActions';
 import AppContext from '../context';
 
-import '../scss/style.scss';
 import Sort, { sortList } from '../components/Sort';
 import ProductItem from '../components/ProductItem';
 import Skeleton from '../components/Skeleton';
@@ -23,12 +22,11 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const auth = getAuth();
-  console.log(auth);
   const { categoryId, currentPage, changeSort, changeSearchValue } = useSelector(
     (state) => state.filterSlice,
   );
   const { product, status } = useSelector((state) => state.productSlice);
-  const { openProductModal, setOpenProductModal } = React.useContext(AppContext);
+  const { openProductModal } = React.useContext(AppContext);
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
   const [openSort, setOpenSort] = React.useState(false);
@@ -36,6 +34,8 @@ const Home = () => {
     id: '',
     title: '',
     price: '',
+    defaultPrice: '',
+    salePrice: '',
     image: '',
     sale: '',
     categoryName: [],

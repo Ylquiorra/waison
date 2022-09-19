@@ -10,6 +10,7 @@ const ProductItem = ({
   id,
   title,
   price,
+  defaultPrice,
   image,
   sale,
   categoryName,
@@ -21,6 +22,7 @@ const ProductItem = ({
   iconModalProductRef,
 }) => {
   const dispatch = useDispatch();
+
   const selectProduct = useSelector((state) =>
     state.productCartSlice.productInCart.find((objToCart) => objToCart.id === id),
   );
@@ -28,12 +30,14 @@ const ProductItem = ({
   const selectProductInWishlist = useSelector((state) =>
     state.productWishlistSlice.productInWishlist.find((objToWishlist) => objToWishlist.id === id),
   );
+  const { setOpenProductModal } = React.useContext(AppContext);
 
   const onClickToOpenModal = () => {
     setProductInModal({
       id,
       title,
       price,
+      defaultPrice,
       image,
       categoryName,
       category,
@@ -45,15 +49,16 @@ const ProductItem = ({
     setOpenProductModal(true);
   };
 
-  const onClickToAdd = () => {
+  const onClickToAdd = async () => {
     const productCart = {
       id,
       title,
       price,
+      defaultPrice: defaultPrice || 0,
       image,
       categoryName,
       category,
-      sale,
+      sale: sale || 0,
       rating,
       text,
     };
@@ -75,14 +80,12 @@ const ProductItem = ({
     dispatch(addProductToWishlist(productWishlist));
   };
 
-  const { setOpenProductModal } = React.useContext(AppContext);
-
   return (
     <div className="item-grid item-grid__sale">
       <div className="item-grid__body">
         <div className="item-grid__image">
           <div className="item-grid__image-sale-text">{`${sale ? 'Sale!' : ''}`} </div>
-          <Link to={`product/${id}`}>
+          <Link to={`/product/${id}`}>
             <img src={image} alt={title} />
           </Link>
           <div ref={iconModalProductRef} className="item-grid__groups-buttons">

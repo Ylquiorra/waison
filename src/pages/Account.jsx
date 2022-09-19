@@ -6,6 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { setCurrentNavigate, removeUser } from '../redux/user/slice';
 import { useAuth } from '../hooks/useAuth';
+import AccountDashboard from '../components/AccountDashboard';
+import AccountOrders from '../components/AccountOrders';
+import AccountDetails from '../components/AccountDetails';
 
 const navigateList = ['Общее', 'Заказы', 'Адрес', 'Редактирование аккаунта'];
 
@@ -16,9 +19,11 @@ const Account = () => {
   const { currentNavigate } = useSelector((state) => state.userSlice);
 
   const handleClickToSingOut = () => {
-    signOut(auth).then();
-    dispatch(removeUser()).catch(() => alert('Не получилось выйти из аккаунта.'));
-    navigate('/login');
+    if (window.confirm('Вы действительно хотите выйти из аккаунта?')) {
+      signOut(auth).then();
+      dispatch(removeUser()).catch(() => alert('Не получилось выйти из аккаунта.'));
+      navigate('/login');
+    }
   };
 
   const { isAuth, email } = useAuth();
@@ -62,13 +67,9 @@ const Account = () => {
               </li>
             </ul>
             <div className="account-body__navigation-content">
-              <h6>
-                Привет, <span>{email}</span>{' '}
-              </h6>
-              <p>
-                Здесь Вы можете просматривать свои последние заказы, управлять адресами доставки, а
-                также изменять свой пароль и редактировать данные учетной записи.
-              </p>
+              {currentNavigate === 0 ? <AccountDashboard email={email} /> : ''}
+              {currentNavigate === 1 ? <AccountOrders /> : ''}
+              {currentNavigate === 3 ? <AccountDetails /> : ''}
             </div>
           </nav>
         </div>

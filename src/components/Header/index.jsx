@@ -46,17 +46,17 @@ const Header = ({ openBurger, setOpenBurger }) => {
               <ul>
                 <Link to="account" onClick={onClickToLinks}>
                   <li>
-                    <p>Account</p>
+                    <p>Аккаунт</p>
                   </li>
                 </Link>
                 <Link to="cart" onClick={onClickToLinks}>
                   <li>
-                    <p>Cart</p>
+                    <p>Корзина</p>
                   </li>
                 </Link>
                 <Link to="wishlist" onClick={onClickToLinks}>
                   <li>
-                    <p>Wishlist</p>
+                    <p>Избранное</p>
                   </li>
                 </Link>
               </ul>
@@ -88,13 +88,10 @@ const Header = ({ openBurger, setOpenBurger }) => {
               <div className="nav-header__list">
                 <ul>
                   <li>
-                    <a href="#">HOME</a>
+                    <a href="#">ГЛАВНАЯ</a>
                   </li>
                   <li>
-                    <a href="#">BLOG</a>
-                  </li>
-                  <li>
-                    <a href="#">SHOP</a>
+                    <a href="#">МАГАЗИН</a>
                   </li>
                 </ul>
               </div>
