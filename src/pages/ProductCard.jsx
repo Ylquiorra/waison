@@ -28,7 +28,6 @@ const ProductCard = () => {
   const [indexImageSlider, setIndexImageSlider] = React.useState(1);
   const [indexPage, setIndexPage] = React.useState(Number(id) + 1);
   const [loadingPage, setLoadingPage] = React.useState(false);
-  console.log(productRelated);
 
   const onClickToAddToWishlist = () => {
     dispatch(addProductToWishlist(productById));

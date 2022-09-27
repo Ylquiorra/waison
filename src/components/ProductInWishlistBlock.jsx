@@ -5,7 +5,19 @@ import { removeProductInCart } from '../redux/productWishlist/slice';
 import { addProductToCart } from '../redux/productCart/slice';
 import { Link } from 'react-router-dom';
 
-const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
+const ProductInWishlistBlock = ({
+  id,
+  title,
+  price,
+  defaultPrice,
+  image,
+  sale,
+  categoryName,
+  category,
+  rating,
+  text,
+  imageSlider,
+}) => {
   const dispatch = useDispatch();
   //* Поиск прям в редаксе!!! (очень полезно)
   const selectProductInWishlist = useSelector((state) =>
@@ -18,6 +30,12 @@ const ProductInWishlistBlock = ({ id, title, price, image, sale }) => {
       title,
       price,
       image,
+      categoryName,
+      category,
+      rating,
+      text,
+      imageSlider,
+      defaultPrice,
       category: [],
       sale,
     };

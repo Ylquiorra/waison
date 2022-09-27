@@ -19,6 +19,7 @@ const productCartSlice = createSlice({
   reducers: {
 
     addProductToCart(state, action) {
+      console.log(action.payload);
       const findProductById = state.productInCart.find((obj) => obj.id === action.payload.id)
       if (findProductById) {
         findProductById.count++
@@ -31,6 +32,8 @@ const productCartSlice = createSlice({
         state.productInCart.push({
           ...action.payload,
           count: 1,
+          defaultPrice: action.payload.defaultPrice || 0,
+          sale: action.payload.sale || 0,
         })
       }
       state.totalCount = calcTotalCount(state.productInCart)

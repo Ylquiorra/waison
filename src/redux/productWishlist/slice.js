@@ -9,13 +9,15 @@ const productWishlistSlice = createSlice({
   initialState,
   reducers: {
     addProductToWishlist(state, action) {
-      //! Пока работает, но нужно передать этот код
+      //? Пока работает, но нужно передать этот код (не помню )
       const findProductById = state.productInWishlist.find((obj) => obj.id === action.payload.id)
       if (findProductById) {
         findProductById.added = true;
       } else {
         state.productInWishlist.push({
           ...action.payload,
+          defaultPrice: action.payload.defaultPrice || 0,
+          sale: action.payload.sale || 0,
         })
       }
     },

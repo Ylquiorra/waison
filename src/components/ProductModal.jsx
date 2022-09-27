@@ -12,7 +12,6 @@ const ProductModal = ({
   price,
   category,
   defaultPrice,
-
   categoryName,
   sale,
   rating,
@@ -58,7 +57,6 @@ const ProductModal = ({
         image,
         categoryName,
         category,
-        
         sale: sale || 0,
         rating,
         text,

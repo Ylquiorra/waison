@@ -1,8 +1,5 @@
 export const calcDefaultPrice = (productDefaultPrice) => {
-  return productDefaultPrice.reduce(
-    (sum, objProduct) => objProduct.defaultPrice * objProduct.count + sum,
-    0,
-  );
+  return productDefaultPrice.reduce((sum, objProduct) => objProduct.defaultPrice * objProduct.count + sum, 0);
 };
 
 export const calcSalePrice = (productSalePrice) => {

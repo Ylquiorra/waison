@@ -1,13 +1,14 @@
 import React from 'react';
 
+//! Хочу сделать актуальное отображение кол-во единиц продукта в категории, но пока тяжело
 const arrCategories = [
-  { name: 'Все', volue: '22' },
-  { name: 'Аксессуары', volue: '3' },
-  { name: 'Кухня', volue: '4' },
-  { name: 'Мебель', volue: '5' },
-  { name: 'Освещение', volue: '6' },
+  { name: 'Все', volue: '12' },
+  { name: 'Аксессуары', volue: '1' },
+  { name: 'Кухня', volue: '9' },
+  { name: 'Мебель', volue: '2' },
+  { name: 'Освещение', volue: '1' },
   { name: 'Для дома', volue: '7' },
-  { name: 'Техника', volue: '8' },
+  { name: 'Техника', volue: '3' },
 ];
 
 const Categories = ({ categoryId, onChangeCategoryId }) => {
