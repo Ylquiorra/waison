@@ -1,0 +1,173 @@
+.view-order {
+  &__container {
+    max-width: 940px;
+  }
+}
+
+.view-order-body {
+}
+.universal-body {
+  &__title {
+    margin: 0 0 11vh 0;
+  }
+}
+.body-view-order {
+  &__content {
+    margin: 0 0 47px 0;
+  }
+
+  &__main-information {
+    text-align: start;
+    margin: 0 0 20px 0;
+    h6 {
+      color: #4c4c4c;
+      margin: 0 0 12px 0;
+      span {
+        background-color: #fcf8e3;
+        padding: 0.2em;
+        color: #000;
+      }
+    }
+  }
+
+  &__details {
+    text-align: start;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #000;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__details-table {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+    tfoot {
+      tr {
+        th {
+          padding: 10px;
+          border-width: 1px 0 0;
+          border-style: solid;
+          border-color: #eeeeee;
+          color: #4c4c4c;
+          font-weight: 400;
+          padding: 9px 12px;
+          line-height: 1.5em;
+        }
+        td {
+          padding: 10px;
+          border-width: 1px 0 0;
+          border-style: solid;
+          border-color: #eeeeee;
+          font-weight: 600;
+          padding: 9px 12px;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+
+  &__castomer-details {
+  }
+}
+.body-view-order-breadcrumbs {
+}
+.details-table-view-order {
+  &__name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    padding: 9px 12px;
+    line-height: 1.5em;
+  }
+
+  &__total {
+    font-weight: 400;
+    padding: 9px 12px;
+    line-height: 1.5em;
+    color: #4c4c4c;
+  }
+
+  &__name-product {
+    padding: 10px;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: #eeeeee;
+    font-size: 18px;
+    color: #000;
+    padding: 9px 12px;
+    line-height: 1.5em;
+  }
+
+  &__price-product {
+    padding: 10px;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: #eeeeee;
+    padding: 9px 12px;
+    line-height: 1.5em;
+  }
+  &__price-product-sale {
+    color: #f65b47;
+  }
+}
+.castomer-details-biling-address-view-order {
+  &__body {
+    margin: 0 0 20px 0;
+    h3 {
+      text-align: start;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #000;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__content {
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+  }
+}
+.table-universal-flex {
+  display: flex;
+}
+.castomer-details-shipping-address-view-order {
+  &__body {
+    h3 {
+      text-align: start;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #000;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__content {
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+  }
+}
+.castomer-details-universal-view-order {
+  &__text {
+    line-height: 1.5em;
+    flex: 1 1 50%;
+    padding: 8px 0;
+    color: #4c4c4c;
+  }
+}

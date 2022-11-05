@@ -46,9 +46,11 @@ const PopupCart = ({ cartPopupRef, setOpenCartPopup, openCartPopup }) => {
               <p>Посмотреть корзину</p>
             </div>
           </Link>
-          <div className="cart-buttons__checkout ">
-            <p>Оформить</p>
-          </div>
+          <Link to="/checkout">
+            <div className="cart-buttons__checkout ">
+              <p>Оформить</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

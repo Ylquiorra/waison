@@ -1,11 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
 
 import SliderSkeleton from '../components/SliderSkeleton';
 
 const HomeCorusel = () => {
-  const [contentSlider, setContentSlider] = React.useState([]);
+  const [contentSlider, setContentSlider] = React.useState([null]);
   const [indexSlider, setIndexSlider] = React.useState(1);
   const [loading, setLoading] = React.useState(true);
 
@@ -53,7 +52,7 @@ const HomeCorusel = () => {
           <div className="corusel__body ">
             {contentSlider.map((objSlider, index) => (
               <div
-                key={objSlider.id}
+                key={index}
                 className={
                   indexSlider === index + 1 ? 'body-corusel body-corusel-active' : 'body-corusel'
                 }>

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const AccountDetails = () => {
+  const { userInformation } = useSelector((state) => state.userInformationSlice);
+
+  console.log(userInformation);
   return (
     <div className="account-body-content-navigation__details">
       <div className="details-navigation-account__main-info-form">
@@ -9,13 +13,17 @@ const AccountDetails = () => {
             <h6 className="universal-input-name">
               Имя <span className="universal-asterisk"> *</span>
             </h6>
-            <input className="universal-input" type="text" />
+            <input
+              placeholder={userInformation.firstName}
+              className="universal-input"
+              type="text"
+            />
           </div>
           <div className="details-navigation-account-main-info__name-last-name">
             <h6 className="universal-input-name">
               Фамилия <span className="universal-asterisk"> *</span>
             </h6>
-            <input className="universal-input" type="text" />
+            <input placeholder={userInformation.lastName} className="universal-input" type="text" />
           </div>
         </div>
         <div className="details-navigation-account-main-info__nickname">
@@ -29,7 +37,7 @@ const AccountDetails = () => {
           <h6 className="universal-input-name">
             Электронная почта<span className="universal-asterisk"> *</span>
           </h6>
-          <input className="universal-input" type="text" />
+          <input placeholder={userInformation.email} className="universal-input" type="email" />
         </div>
       </div>
       <div className="details-navigation-account__change-password">

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const AccountDashboard = ({ email }) => {
+import { useAuth } from '../hooks/useAuth';
+
+const AccountDashboard = () => {
+  const { email } = useAuth();
+
   return (
     <div className="account-body-content-navigation__dashboard">
       <h6>

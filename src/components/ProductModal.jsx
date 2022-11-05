@@ -53,7 +53,7 @@ const ProductModal = ({
         id,
         title,
         price,
-        defaultPrice: defaultPrice || 0,
+        defaultPrice: defaultPrice || 0, //! В этом месте можно подумать (когда убираю ИЛИ при калькуляции с более 2х товаров - NaN)
         image,
         categoryName,
         category,

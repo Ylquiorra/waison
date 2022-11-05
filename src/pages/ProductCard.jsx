@@ -10,8 +10,8 @@ import Loader from '../components/Loader';
 
 const ProductCard = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const selectProductInWishlist = useSelector((state) =>
     state.productWishlistSlice.productInWishlist.find((obj) => obj.id === id),

@@ -11,10 +11,12 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+
     setUser(state, action) {
       state.email = action.payload.email;
       state.token = action.payload.token;
-      state.id = action.payload.id;
+      // переделать на UID
+      state.id = { uid: action.payload.id };
     },
     removeUser(state) {
       state.email = null;
@@ -27,6 +29,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { setUser, removeUser, setCurrentNavigate } = userSlice.actions;
+export const { setUser, removeUser, setCurrentNavigate, setUserInformation } = userSlice.actions;
 
 export default userSlice.reducer;

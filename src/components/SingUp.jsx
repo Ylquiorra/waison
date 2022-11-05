@@ -11,8 +11,6 @@ const SingUp = () => {
   const navigate = useNavigate();
   const auth = getAuth();
 
- 
-
   const handleSingUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {

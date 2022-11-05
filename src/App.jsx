@@ -13,6 +13,8 @@ import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Account from './pages/Account';
 import Register from './pages/Register';
+import ViewOrder from './pages/ViewOrder';
+import Checkout from './pages/Checkout';
 
 const App = () => {
   const [openProductModal, setOpenProductModal] = React.useState(false);
@@ -37,9 +39,11 @@ const App = () => {
           <Route path="cart" element={<Cart />} />
           <Route path="product/:id" element={<ProductCard />} />
           <Route path="wishlist" element={<Wishlist />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/account/view-order" element={<ViewOrder />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
