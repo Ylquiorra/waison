@@ -18,7 +18,7 @@ const Account = () => {
 
   React.useEffect(() => {
     const getUserInfo = async () => {
-      const orderRef = doc(db, 'informationAboutUser', id?.uid);
+      const orderRef = doc(db, `user/${id?.uid}/informationAboutUser/infoUser`);
       const unsubscribe = onSnapshot(orderRef, (userInfo) => {
         if (userInfo.exists()) {
           dispatch(setUserInformation(userInfo.data()));

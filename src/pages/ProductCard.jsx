@@ -95,7 +95,7 @@ const ProductCard = () => {
           }`,
         );
         setProductById(data);
-        setProductRelated(relatedProduct.data);
+        setProductRelated(relatedProduct.data.filter((obj) => obj.id !== id));
         setImageSlider(data.imageSlider);
         setLoadingPage(true);
       } catch (error) {

@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 const AccountDetails = () => {
   const { userInformation } = useSelector((state) => state.userInformationSlice);
 
-  console.log(userInformation);
   return (
     <div className="account-body-content-navigation__details">
       <div className="details-navigation-account__main-info-form">

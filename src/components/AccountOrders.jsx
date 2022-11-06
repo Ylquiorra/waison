@@ -13,7 +13,6 @@ const AccountOrders = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useSelector((state) => state.userSlice);
   const location = useLocation();
-  console.log(orders);
 
   const ordersArr = [];
 
@@ -43,14 +42,13 @@ const AccountOrders = () => {
   }, []);
 
   //!!!нужно вынести куда то
-  if (orders.length > 0 && 'orderItems' in orders[0]) {
-    dispatch(setOrder(orders));
-  }
+  //* вылезает ошибка
+  // if (orders.length > 0 && 'orderItems' in orders[0]) {
+  //   dispatch(setOrder(orders));
+  // }
 
   const handleOpenOrder = (value) => {
-    console.log(value);
     const findOrdersArr = orders.find((objOrder) => objOrder.orderValue === value);
-    console.log(findOrdersArr);
     dispatch(setOpenOrder(findOrdersArr));
   };
 

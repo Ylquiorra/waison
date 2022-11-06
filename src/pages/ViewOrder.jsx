@@ -6,6 +6,7 @@ import AccountNavigate from '../components/AccountNavigate';
 const ViewOrder = () => {
   const { userInformation } = useSelector((state) => state.userInformationSlice);
   const { openOrder } = useSelector((state) => state.orderSlice);
+  console.log(openOrder.orderInformation.orderNumber);
   return (
     <main className="view-order universal">
       <div className="view-order__container universal__container">
@@ -30,7 +31,10 @@ const ViewOrder = () => {
             <section className="body-view-order__content">
               <div className="body-view-order__main-information">
                 <h6>
-                  Заказ #<span className="informationOfOrder numberOfOrder"> 0 </span>
+                  Заказ #
+                  <span className="informationOfOrder numberOfOrder">
+                    {openOrder.orderInformation.orderNumber}
+                  </span>
                   был сделан
                   <span>28 Сентября 2022 года</span>, который в настоящее время
                   <span>в обработке</span>

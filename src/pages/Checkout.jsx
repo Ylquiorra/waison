@@ -52,6 +52,7 @@ const Checkout = () => {
         orderItems: productInCart,
         orderInformation: {
           orderPrice: totalPrice,
+          orderNumber: numberOfOrder + 1,
           // orderDate: serverTimestamp(),
         },
       });

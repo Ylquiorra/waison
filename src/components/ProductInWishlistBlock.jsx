@@ -16,7 +16,7 @@ const ProductInWishlistBlock = ({
   category,
   rating,
   text,
-  imageSlider,
+  // imageSlider,
 }) => {
   const dispatch = useDispatch();
   //* Поиск прям в редаксе!!! (очень полезно)
@@ -29,14 +29,13 @@ const ProductInWishlistBlock = ({
       id,
       title,
       price,
+      category,
       image,
       categoryName,
-      category,
       rating,
       text,
-      imageSlider,
+      // imageSlider, //* возникает ошибка при создании ордера
       defaultPrice,
-      category: [],
       sale,
     };
     dispatch(addProductToCart(productFromWishlist));
