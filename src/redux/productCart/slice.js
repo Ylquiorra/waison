@@ -47,6 +47,7 @@ const productCartSlice = createSlice({
       if (findProductById) {
         findProductById.count--;
       }
+
       if (state.productInCart.find((obj) => obj.sale > '0')) {
         state.salePrice = calcSalePrice(state.productInCart);
       }
@@ -56,6 +57,7 @@ const productCartSlice = createSlice({
     removeProductInCart(state, action) {
       state.productInCart = state.productInCart.filter((obj) => obj.id !== action.payload);
 
+      state.totalCount = calcTotalCount(state.productInCart)
       if (state.productInCart.find((obj) => obj.sale > '0')) {
         state.salePrice = calcSalePrice(state.productInCart);
       }

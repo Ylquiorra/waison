@@ -8,7 +8,7 @@ const AccountDashboard = () => {
   return (
     <div className="account-body-content-navigation__dashboard">
       <h6>
-        Привет, <span>{email}</span>.
+        Привет, <span>{email}</span>
       </h6>
       <p>
         Здесь Вы можете просматривать свои последние заказы, управлять адресами доставки, а также

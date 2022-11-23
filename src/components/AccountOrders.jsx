@@ -1,10 +1,11 @@
 import React from 'react';
-import { collection, doc, getDocs, onSnapshot } from 'firebase/firestore';
+import dayjs from 'dayjs';
+import { collection, getDocs } from 'firebase/firestore';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { db } from '../firebase';
 
-import { setOrder, setOpenOrder } from '../redux/order/slice';
+import { setOpenOrder } from '../redux/order/slice';
 import Loader from './Loader';
 
 const AccountOrders = () => {
@@ -13,30 +14,24 @@ const AccountOrders = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useSelector((state) => state.userSlice);
   const location = useLocation();
-
-  const ordersArr = [];
+  console.log(orders);
 
   React.useEffect(() => {
     const getOrders = async () => {
-      // const orderRef = doc(db, 'orders', id.uid);
       const querySnapshot = await getDocs(collection(db, 'user', id.uid, 'orders'));
       querySnapshot.forEach((doc) => {
-        const responseOrders = { ...doc.data(), orderValue: doc.id };
+        const responseOrders = {
+          ...doc.data(),
+          orderValue: doc.id,
+          orderDate: dayjs
+            .unix(doc.data().orderInformation.orderDate)
+            .format('HH:mm:ss DD MMMM YYYY'),
+        };
+        const ordersArr = [];
         ordersArr.push(responseOrders);
         setOrders(ordersArr);
       });
       setIsLoading(false);
-
-      // const unsubscribe = onSnapshot(orderRef, (order) => {
-      //   console.log(order.data());
-      //   if (order.exists()) {
-      //     setOrders(order.data());
-      //   }
-      //   setIsLoading(false);
-      // });
-      // return () => {
-      //   unsubscribe();
-      // };
     };
     getOrders();
   }, []);

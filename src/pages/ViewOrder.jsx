@@ -6,7 +6,6 @@ import AccountNavigate from '../components/AccountNavigate';
 const ViewOrder = () => {
   const { userInformation } = useSelector((state) => state.userInformationSlice);
   const { openOrder } = useSelector((state) => state.orderSlice);
-  console.log(openOrder.orderInformation.orderNumber);
   return (
     <main className="view-order universal">
       <div className="view-order__container universal__container">
@@ -36,7 +35,7 @@ const ViewOrder = () => {
                     {openOrder.orderInformation.orderNumber}
                   </span>
                   был сделан
-                  <span>28 Сентября 2022 года</span>, который в настоящее время
+                  <span>{openOrder.orderDate}</span>, который в настоящее время
                   <span>в обработке</span>
                 </h6>
               </div>
@@ -57,7 +56,7 @@ const ViewOrder = () => {
                         </td>
                         {objOrderItems.sale ? (
                           <td className="details-table-view-order__price-product details-table-view-order__price-product-sale">
-                            {objOrderItems.sale} р.
+                            {objOrderItems.sale * objOrderItems.count} р.
                           </td>
                         ) : (
                           <td className="details-table-view-order__price-product">

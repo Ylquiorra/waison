@@ -1,16 +1,18 @@
 import { collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { db } from '../firebase';
 import 'firebase/firestore';
 
 import { setMakeOrder, setOrderPrice, setNumberOfOrder } from '../redux/makeOrder/slice';
+import { setOrder } from '../redux/order/slice';
 import { clearProductInCart } from '../redux/productCart/slice';
 import { setUserInformation } from '../redux/useInformation/slice';
 
 const Checkout = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { productInCart, totalPrice } = useSelector((state) => state.productCartSlice);
   const { numberOfOrder } = useSelector((state) => state.makeOrdersSlice);
   const { id } = useSelector((state) => state.userSlice);
@@ -24,6 +26,16 @@ const Checkout = () => {
   const [telNumber, setTelNumber] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [otherNotes, setOtherNotes] = React.useState('');
+
+  React.useEffect(() => {
+    if (id === null) {
+      alert(
+        'Вы не можете оформить заказ, пока не авторезированы. Выполните вход в аккаунт или зарегистрируйтесь.',
+      );
+      alert('Сейчас мы переадресуем вас на страницу авторизации.');
+      navigate('/account');
+    }
+  }, []);
 
   const clickToCreateOrder = () => {
     const personInformation = {
@@ -39,6 +51,15 @@ const Checkout = () => {
     };
     dispatch(setUserInformation(personInformation));
     dispatch(setOrderPrice(totalPrice));
+    dispatch(
+      setOrder({
+        orderItems: productInCart,
+        orderInformation: {
+          orderPrice: totalPrice,
+          orderNumber: numberOfOrder + 1,
+        },
+      }),
+    );
     dispatch(setNumberOfOrder(numberOfOrder + 1));
     dispatch(setMakeOrder(productInCart));
     dispatch(clearProductInCart());
@@ -51,9 +72,9 @@ const Checkout = () => {
       await setDoc(ordersRef, {
         orderItems: productInCart,
         orderInformation: {
+          orderDate: serverTimestamp(),
           orderPrice: totalPrice,
           orderNumber: numberOfOrder + 1,
-          // orderDate: serverTimestamp(),
         },
       });
       await setDoc(deleveryInformationRef, {
@@ -73,8 +94,13 @@ const Checkout = () => {
   };
 
   const createOrder = () => {
-    sendingOrderToServer();
-    clickToCreateOrder();
+    if (productInCart.length > 0) {
+      sendingOrderToServer();
+      clickToCreateOrder();
+      navigate('order-received');
+    } else {
+      alert('Вы не можете создать заказ, пока не добавили товар в корзину');
+    }
   };
 
   return (

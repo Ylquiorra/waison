@@ -21,7 +21,8 @@ const AccountNavigate = () => {
   const handleClickToSingOut = () => {
     if (window.confirm('Вы действительно хотите выйти из аккаунта?')) {
       signOut(auth).then();
-      dispatch(removeUser()).catch(() => alert('Не получилось выйти из аккаунта.'));
+      // dispatch(removeUser());
+      dispatch(removeUser()).catch(alert('Не получилось выйти из аккаунта.')); //!описанный в firebase способ
       navigate('/login');
     }
   };

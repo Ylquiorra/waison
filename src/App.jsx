@@ -15,6 +15,7 @@ import Account from './pages/Account';
 import Register from './pages/Register';
 import ViewOrder from './pages/ViewOrder';
 import Checkout from './pages/Checkout';
+import OrderReceived from './pages/OrderReceived';
 
 const App = () => {
   const [openProductModal, setOpenProductModal] = React.useState(false);
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="product/:id" element={<ProductCard />} />
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/order-received" element={<OrderReceived />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/account" element={<Account />} />

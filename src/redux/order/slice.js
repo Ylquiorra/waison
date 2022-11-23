@@ -15,6 +15,7 @@ const orderSlice = createSlice({
     },
     setOpenOrder(state, action) {
       state.openOrder = action.payload
+      console.log(action);
     },
   },
 })

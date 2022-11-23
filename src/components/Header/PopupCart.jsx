@@ -27,31 +27,33 @@ const PopupCart = ({ cartPopupRef, setOpenCartPopup, openCartPopup }) => {
           </div>
         )}
         {productInCart.length > 0 ? (
-          <div className="header-cart__content-total total-cart">
-            <div className="total-cart__text">
-              <p>Стоимость:</p>
+          <>
+            <div className="header-cart__content-total total-cart">
+              <div className="total-cart__text">
+                <p>Стоимость:</p>
+              </div>
+              <div className="total-cart__price">
+                <p>{totalPrice} ₽.</p>
+              </div>
             </div>
-            <div className="total-cart__price">
-              <p>{totalPrice} ₽.</p>
+            <div className="header-cart__content-buttons cart-buttons">
+              <Link to="cart">
+                <div
+                  onClick={() => setOpenCartPopup(false)}
+                  className="cart-buttons__view-cart black-button">
+                  <p>Посмотреть корзину</p>
+                </div>
+              </Link>
+              <Link to="/checkout">
+                <div className="cart-buttons__checkout ">
+                  <p>Оформить</p>
+                </div>
+              </Link>
             </div>
-          </div>
+          </>
         ) : (
           <></>
         )}
-        <div className="header-cart__content-buttons cart-buttons">
-          <Link to="cart">
-            <div
-              onClick={() => setOpenCartPopup(false)}
-              className="cart-buttons__view-cart black-button">
-              <p>Посмотреть корзину</p>
-            </div>
-          </Link>
-          <Link to="/checkout">
-            <div className="cart-buttons__checkout ">
-              <p>Оформить</p>
-            </div>
-          </Link>
-        </div>
       </div>
     </div>
   );
