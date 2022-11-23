@@ -14,21 +14,20 @@ const AccountOrders = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useSelector((state) => state.userSlice);
   const location = useLocation();
-  console.log(orders);
 
   React.useEffect(() => {
     const getOrders = async () => {
       const querySnapshot = await getDocs(collection(db, 'user', id.uid, 'orders'));
+      const ordersArr = [];
+
       querySnapshot.forEach((doc) => {
-        const responseOrders = {
-          ...doc.data(),
-          orderValue: doc.id,
-          orderDate: dayjs
-            .unix(doc.data().orderInformation.orderDate)
-            .format('HH:mm:ss DD MMMM YYYY'),
-        };
-        const ordersArr = [];
-        ordersArr.push(responseOrders);
+        const a = doc.data();
+        a.orderInformation.orderValue = doc.id;
+        a.orderInformation.orderDate = dayjs
+          .unix(doc.data().orderInformation.orderDate?.seconds)
+          .locale('ru')
+          .format('HH:mm:ss DD MMMM YYYY');
+        ordersArr.push({ ...a });
         setOrders(ordersArr);
       });
       setIsLoading(false);
@@ -43,7 +42,10 @@ const AccountOrders = () => {
   // }
 
   const handleOpenOrder = (value) => {
-    const findOrdersArr = orders.find((objOrder) => objOrder.orderValue === value);
+    const findOrdersArr = orders.find((objOrder) => objOrder.orderInformation.orderValue === value);
+    console.log(findOrdersArr);
+    console.log(orders);
+
     dispatch(setOpenOrder(findOrdersArr));
   };
 
@@ -74,7 +76,7 @@ const AccountOrders = () => {
                   <td>
                     <Link to="view-order">
                       <button
-                        onClick={() => handleOpenOrder(objOrder.orderValue)}
+                        onClick={() => handleOpenOrder(objOrder.orderInformation.orderValue)}
                         className="account-body-content-navigation__orders-body-text-button black-button">
                         Перейти
                       </button>

@@ -35,7 +35,7 @@ const ViewOrder = () => {
                     {openOrder.orderInformation.orderNumber}
                   </span>
                   был сделан
-                  <span>{openOrder.orderDate}</span>, который в настоящее время
+                  <span>{openOrder.orderInformation.orderDate}</span>, который в настоящее время
                   <span>в обработке</span>
                 </h6>
               </div>
