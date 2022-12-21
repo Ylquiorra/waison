@@ -1,11 +1,31 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase';
+
+import Loader from '../components/Loader';
 
 const OrderReceived = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [numberOfTotalOrders, setNumberOfTotalOrders] = React.useState(0);
   const { order } = useSelector((state) => state.orderSlice);
   const { id } = useSelector((state) => state.userSlice);
+
+  React.useEffect(() => {
+    const getOrders = async () => {
+      const querySnapshot = await getDocs(collection(db, 'user', id.uid, 'orders'));
+      const ordersArr = [];
+      querySnapshot.forEach((doc) => {
+        const a = doc.data();
+        ordersArr.push({ ...a });
+      });
+      setNumberOfTotalOrders(ordersArr.length);
+      setIsLoading(false);
+    };
+    getOrders();
+  }, []);
 
   React.useEffect(() => {
     if (order.length === 0) {
@@ -13,6 +33,9 @@ const OrderReceived = () => {
     }
   }, []);
 
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <>
       {order.length === 0 ? (
@@ -68,15 +91,11 @@ const OrderReceived = () => {
                       <ul className="body-received-order-main-information__list">
                         <li>
                           <p> Номер заказа</p>
-                          <span>{order.orderInformation.orderNumber}</span>
-                        </li>
-                        <li>
-                          <p> Дата заказа</p>
-                          <span>22.05.2022</span>
+                          <span>{numberOfTotalOrders}</span>
                         </li>
                         <li>
                           <p>Цена заказа</p>
-                          <span>{order.orderInformation.orderPrice} р.</span>
+                          <span>{order.orderInformation.orderPrice} ₽.</span>
                         </li>
                         <li>
                           <p>Оплата заказа</p>
@@ -102,11 +121,11 @@ const OrderReceived = () => {
                             </td>
                             {objOrderItems.sale ? (
                               <td className="details-table-received-order__price-product details-table-received-order__price-product-sale">
-                                {objOrderItems.sale} р.
+                                {objOrderItems.sale} ₽.
                               </td>
                             ) : (
                               <td className="details-table-received-order__price-product">
-                                {objOrderItems.price} р.
+                                {objOrderItems.price} ₽.
                               </td>
                             )}
                           </tr>
@@ -115,7 +134,7 @@ const OrderReceived = () => {
                       <tfoot>
                         <tr>
                           <th>Первичная цена:</th>
-                          <td>{order.orderInformation.orderPrice} р.</td>
+                          <td>{order.orderInformation.orderPrice} ₽.</td>
                         </tr>
                         <tr>
                           <th>Доставка</th>
@@ -127,7 +146,7 @@ const OrderReceived = () => {
                         </tr>
                         <tr>
                           <th>Итоговая цена</th>
-                          <td>{order.orderInformation.orderPrice} р.</td>
+                          <td>{order.orderInformation.orderPrice} ₽.</td>
                         </tr>
                       </tfoot>
                     </table>

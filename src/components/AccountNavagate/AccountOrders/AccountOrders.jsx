@@ -19,14 +19,13 @@ const AccountOrders = () => {
     const getOrders = async () => {
       const querySnapshot = await getDocs(collection(db, 'user', id.uid, 'orders'));
       const ordersArr = [];
-
       querySnapshot.forEach((doc) => {
         const a = doc.data();
         a.orderInformation.orderValue = doc.id;
         a.orderInformation.orderDate = dayjs
           .unix(doc.data().orderInformation.orderDate?.seconds)
           .locale('ru')
-          .format('HH:mm:ss DD MMMM YYYY');
+          .format('DD MMMM YYYY');
         ordersArr.push({ ...a });
         setOrders(ordersArr);
       });
@@ -67,10 +66,10 @@ const AccountOrders = () => {
               </thead>
               <tbody className="account-body-content-navigation__orders-body-text">
                 <tr>
-                  <td># {index} </td>
-                  <td>19 Сентября, 2022</td>
+                  <td># {index + 1} </td>
+                  <td>{objOrder.orderInformation.orderDate}</td>
                   <td>В обработке</td>
-                  <td> {objOrder.orderInformation.orderPrice} р.</td>
+                  <td> {objOrder.orderInformation.orderPrice} ₽.</td>
                   <td>
                     <Link to="view-order">
                       <button

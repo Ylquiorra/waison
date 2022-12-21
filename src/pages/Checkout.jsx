@@ -56,7 +56,6 @@ const Checkout = () => {
         orderItems: productInCart,
         orderInformation: {
           orderPrice: totalPrice,
-          orderNumber: numberOfOrder + 1,
         },
       }),
     );
@@ -74,7 +73,6 @@ const Checkout = () => {
         orderInformation: {
           orderDate: serverTimestamp(),
           orderPrice: totalPrice,
-          orderNumber: numberOfOrder + 1,
         },
       });
       await setDoc(deleveryInformationRef, {
