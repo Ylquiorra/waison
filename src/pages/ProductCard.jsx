@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { addProductToWishlist } from '../redux/productWishlist/slice';
 import { addProductToCart } from '../redux/productCart/slice';
-import ProductItem from '../components/ProductItem';
+import ProductItem from '../components/Product/ProductItem';
 import Loader from '../components/Loader';
-import ProductCardItem from '../components/ProductCardItem';
+import ProductCardItem from '../components/Product/ProductCardItem';
 
 const ProductCard = () => {
   const dispatch = useDispatch();

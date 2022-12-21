@@ -5,7 +5,7 @@ import {
   minusProductInCart,
   addProductToCart,
   removeProductInCart,
-} from '../redux/productCart/slice';
+} from '../../../redux/productCart/slice';
 
 const ProductInCart = ({ id, title, price, image, category, sale, count }) => {
   const dispatch = useDispatch();

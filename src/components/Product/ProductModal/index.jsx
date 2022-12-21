@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { addProductToCart, setValueCount } from '../redux/productCart/slice';
-import AppContext from '../context';
+import { addProductToCart, setValueCount } from '../../../redux/productCart/slice';
+import AppContext from '.././../../context';
 
 const ProductModal = ({
   id,

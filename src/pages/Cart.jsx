@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import EmptyItem from '../components/EmptyItem';
 
-import ProductInCart from '../components/ProductInCart';
+import ProductInCart from '../components/Product/ProductInCart';
 
 const Cart = () => {
   const { productInCart, totalPrice } = useSelector((state) => state.productCartSlice);

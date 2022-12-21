@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import AccountNavigate from '../components/AccountNavigate';
+import AccountNavigate from '../components/AccountNavagation/AccountNavigate';
 
 const ViewOrder = () => {
   const { userInformation } = useSelector((state) => state.userInformationSlice);

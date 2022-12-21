@@ -3,10 +3,10 @@ import dayjs from 'dayjs';
 import { collection, getDocs } from 'firebase/firestore';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import { db } from '../firebase';
+import { db } from '../../firebase';
 
-import { setOpenOrder } from '../redux/order/slice';
-import Loader from './Loader';
+import { setOpenOrder } from '../../redux/order/slice';
+import Loader from '../Loader';
 
 const AccountOrders = () => {
   const dispatch = useDispatch();
@@ -43,8 +43,6 @@ const AccountOrders = () => {
 
   const handleOpenOrder = (value) => {
     const findOrdersArr = orders.find((objOrder) => objOrder.orderInformation.orderValue === value);
-    console.log(findOrdersArr);
-    console.log(orders);
 
     dispatch(setOpenOrder(findOrdersArr));
   };

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { removeProductInCart } from '../redux/productWishlist/slice';
-import { addProductToCart } from '../redux/productCart/slice';
+import { removeProductInCart } from '../../../redux/productWishlist/slice';
+import { addProductToCart } from '../../../redux/productCart/slice';
 import { Link } from 'react-router-dom';
 
 const ProductInWishlistBlock = ({

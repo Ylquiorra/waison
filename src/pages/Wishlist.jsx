@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import EmptyItem from '../components/EmptyItem';
 
-import ProductInWishlistBlock from '../components/ProductInWishlistBlock';
+import ProductInWishlistBlock from '../components/Product/ProductInWishlistBlock';
 
 const Wishlist = () => {
   const { productInWishlist } = useSelector((state) => state.productWishlistSlice);

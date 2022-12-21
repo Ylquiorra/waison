@@ -1,7 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { removeProductInCart } from '../../redux/productCart/slice';
+import { removeProductInCart } from '../../../redux/productCart/slice';
 
 const ProductInPopup = ({ id, title, price, image, category, sale, count }) => {
   const dispatch = useDispatch();

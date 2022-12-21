@@ -7,14 +7,14 @@ import { setCategoryId, setCurrentPage, setChangeSort, setFilters } from '../red
 import { fetchProductById } from '../redux/product/asyncActions';
 import AppContext from '../context';
 
-import Sort, { sortList } from '../components/Sort';
-import ProductItem from '../components/ProductItem';
+import Sort, { sortList } from '../components/Filter/Sort';
+import ProductItem from '../components/Product/ProductItem';
 import Skeleton from '../components/Skeleton';
-import Categories from '../components/Categories';
+import Categories from '../components/Filter/Categories';
 import Pagination from '../components/Pagination';
-import ProductModal from '../components/ProductModal';
+import ProductModal from '../components/Product/ProductModal';
 import HomeCorusel from '../components/HomeCorusel';
-import NoProducts from '../components/NoProducts';
+import NoProducts from '../components/Product/NoProducts';
 
 const Home = () => {
   const dispatch = useDispatch();

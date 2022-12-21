@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { addProductToCart } from '../../redux/productCart/slice';
-import { addProductToWishlist } from '../../redux/productWishlist/slice';
-import AppContext from '../../context';
+import { addProductToCart } from '../../../redux/productCart/slice';
+import { addProductToWishlist } from '../../../redux/productWishlist/slice';
+import AppContext from '../../../context';
 
 const ProductItem = ({
   id,

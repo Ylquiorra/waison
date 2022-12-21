@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SingIn from '../components/SingIn';
+import SingIn from '../components/Authorization/SingIn';
 
 const Login = () => {
   return (

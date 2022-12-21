@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
-import { setUser, setUserInformation } from '../redux/user/slice';
-import Form from './Form';
-import Loader from './Loader';
+import { setUser, setUserInformation } from '../../../redux/user/slice';
+import Form from '../../Form';
+import Loader from '../../Loader';
 
 const SingIn = () => {
   const [loadingSingInPage, setLoadingSingInPage] = React.useState(true);

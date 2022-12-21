@@ -4,11 +4,11 @@ import { getAuth, signOut } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { setCurrentNavigate, removeUser } from '../redux/user/slice';
+import { setCurrentNavigate, removeUser } from '../../redux/user/slice';
 
-import AccountDashboard from './AccountDashboard';
-import AccountOrders from './AccountOrders';
-import AccountDetails from './AccountDetails';
+import AccountDashboard from '../AccountNavagation/AccountDashboard';
+import AccountOrders from '../AccountNavagation/AccountOrders';
+import AccountDetails from '../AccountNavagation/AccountDetails';
 
 const navigateList = ['Общее', 'Заказы', 'Адрес', 'Редактирование аккаунта'];
 
