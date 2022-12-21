@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import PopupCart from './PopupCart';
-import Search from '../Search';
+import PopupCart from './PopupCart/PopupCart';
+import Search from '../Search/Search';
 
 const Header = ({ openBurger, setOpenBurger }) => {
   const { totalCount } = useSelector((state) => state.productCartSlice);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SingUp from '../components/Authorization/SingUp';
+import SingUp from '../components/Authorization/SingUp/SingUp';
 
 const Register = () => {
   return (

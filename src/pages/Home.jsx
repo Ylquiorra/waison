@@ -7,14 +7,14 @@ import { setCategoryId, setCurrentPage, setChangeSort, setFilters } from '../red
 import { fetchProductById } from '../redux/product/asyncActions';
 import AppContext from '../context';
 
-import Sort, { sortList } from '../components/Filter/Sort';
-import ProductItem from '../components/Product/ProductItem';
-import Skeleton from '../components/Skeleton';
-import Categories from '../components/Filter/Categories';
-import Pagination from '../components/Pagination';
-import ProductModal from '../components/Product/ProductModal';
+import Sort, { sortList } from '../components/Filter/Sort/Sort';
+import ProductItem from '../components/Product/ProductItem/ProductItem';
+import Skeleton from '../components/Skeleton/Skeleton';
+import Categories from '../components/Filter/Categories/Categories';
+import Pagination from '../components/Pagination/Pagination';
+import ProductModal from '../components/Product/ProductModal/ProductModal';
 import HomeCorusel from '../components/HomeCorusel';
-import NoProducts from '../components/Product/NoProducts';
+import NoProducts from '../components/Product/NoProducts/NoProducts';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ const Home = () => {
 
   const fetchProduct = async () => {
     const fetchCategory =
-      categoryId > 0 && changeSearchValue.length == 0 ? `category=${categoryId}` : '';
+      categoryId > 0 && changeSearchValue.length === 0 ? `category=${categoryId}` : '';
     const fetchOrder = changeSort.sortProperty.includes('-') ? 'asc' : 'desc';
     const fetchSortBy = changeSort.sortProperty.replace('-', '');
     const fetchSearch = changeSearchValue ? `&search=${changeSearchValue}` : '';

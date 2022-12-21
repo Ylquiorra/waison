@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import EmptyItem from '../components/EmptyItem';
 
-import ProductInWishlistBlock from '../components/Product/ProductInWishlistBlock';
+import ProductInWishlistBlock from '../components/Product/ProductInWishlistBlock/ProductInWishlistBlock';
 
 const Wishlist = () => {
   const { productInWishlist } = useSelector((state) => state.productWishlistSlice);

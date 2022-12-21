@@ -5,9 +5,9 @@ import { useDispatch } from 'react-redux';
 
 import { addProductToWishlist } from '../redux/productWishlist/slice';
 import { addProductToCart } from '../redux/productCart/slice';
-import ProductItem from '../components/Product/ProductItem';
+import ProductItem from '../components/Product/ProductItem/ProductItem';
 import Loader from '../components/Loader';
-import ProductCardItem from '../components/Product/ProductCardItem';
+import ProductCardItem from '../components/Product/ProductCardItem/ProductCardItem';
 
 const ProductCard = () => {
   const dispatch = useDispatch();

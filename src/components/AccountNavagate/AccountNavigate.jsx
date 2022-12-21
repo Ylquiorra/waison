@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { setCurrentNavigate, removeUser } from '../../redux/user/slice';
 
-import AccountDashboard from '../AccountNavagation/AccountDashboard';
-import AccountOrders from '../AccountNavagation/AccountOrders';
-import AccountDetails from '../AccountNavagation/AccountDetails';
+import AccountDashboard from '../AccountNavagate/AccountDashboard/AccountDashboard';
+import AccountOrders from '../AccountNavagate/AccountOrders/AccountOrders';
+import AccountDetails from '../AccountNavagate/AccountDetails/AccountDetails';
 
 const navigateList = ['Общее', 'Заказы', 'Адрес', 'Редактирование аккаунта'];
 

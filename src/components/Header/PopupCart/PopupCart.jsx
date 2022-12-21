@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import ProductInPopup from '../ProductInPopup';
+import ProductInPopup from '../ProductInPopup/ProductInPopup';
 
 const PopupCart = ({ cartPopupRef, setOpenCartPopup, openCartPopup }) => {
   const { productInCart } = useSelector((state) => state.productCartSlice);

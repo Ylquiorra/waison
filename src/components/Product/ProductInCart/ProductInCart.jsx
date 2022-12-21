@@ -78,7 +78,5 @@ const ProductInCart = ({ id, title, price, image, category, sale, count }) => {
     </div>
   );
 };
-{
-}
 
 export default ProductInCart;

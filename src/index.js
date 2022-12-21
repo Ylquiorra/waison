@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import './firebase'
 
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
 
 import './scss/style.scss';
 
@@ -19,4 +19,4 @@ root.render(
 );
 
 
-reportWebVitals();
+

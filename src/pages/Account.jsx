@@ -6,7 +6,7 @@ import { db } from '../firebase';
 
 import { setUserInformation } from '../redux/useInformation/slice';
 import { useAuth } from '../hooks/useAuth';
-import AccountNavigate from '../components/AccountNavagation/AccountNavigate';
+import AccountNavigate from '../components/AccountNavagate/AccountNavigate';
 import Loader from '../components/Loader';
 
 const Account = () => {
