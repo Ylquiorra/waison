@@ -245,8 +245,9 @@ const ProductCardItem = ({
                 <p>Категория:</p>
                 {categoryName.map((objCategoryName, index) => (
                   <Link
+                    key={index}
                     to={'/?sortProperty=default&changeSearchValue=&currentPage=1&categoryId=' + 2}>
-                    <span key={index}>{objCategoryName}</span>
+                    <span>{objCategoryName}</span>
                   </Link>
                 ))}
               </div>

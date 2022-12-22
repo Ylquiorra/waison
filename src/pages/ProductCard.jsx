@@ -8,16 +8,33 @@ import { addProductToCart } from '../redux/productCart/slice';
 import ProductItem from '../components/Product/ProductItem/ProductItem';
 import Loader from '../components/Loader';
 import ProductCardItem from '../components/Product/ProductCardItem/ProductCardItem';
+import AppContext from '../context';
+import ProductModal from '../components/Product/ProductModal/ProductModal';
 
 const ProductCard = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const { openProductModal } = React.useContext(AppContext);
 
   //TODO немного неправильно работает переключение продуктов по стрелкам
 
   const [productById, setProductById] = React.useState([]);
   const [productRelated, setProductRelated] = React.useState([]);
   const [loadingPage, setLoadingPage] = React.useState(false);
+  const [productInModal, setProductInModal] = React.useState({
+    id: '',
+    title: '',
+    price: '',
+    defaultPrice: '',
+    salePrice: '',
+    image: '',
+    sale: '',
+    categoryName: [],
+    category: [],
+    rating: '',
+    imageSlider: [],
+    text: '',
+  });
 
   const onClickToAddToWishlist = () => {
     dispatch(addProductToWishlist(productById[0]));
@@ -75,10 +92,15 @@ const ProductCard = () => {
               <div className="related-product__title">
                 <h3>Похожие товары</h3>
               </div>
+              {openProductModal && <ProductModal {...productInModal} />}
               {productRelated.length > 0 ? (
                 <div className="related-product__grid-items">
                   {productRelated.map((objRelated) => (
-                    <ProductItem key={objRelated.id} {...objRelated} />
+                    <ProductItem
+                      key={objRelated.id}
+                      {...objRelated}
+                      setProductInModal={setProductInModal}
+                    />
                   ))}
                 </div>
               ) : (
