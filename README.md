@@ -14,7 +14,7 @@ axios, debounce, qs, sass, firebase, react-toolkit, react-router-dom;
 ## Запуск проекта
 
 Установка зависимостей проекта
-### 'npm install'
+### `npm install`
 
 Запуск приложения
-### 'npm start'
+### `npm start`
